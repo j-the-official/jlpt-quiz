@@ -1,0 +1,51 @@
+{
+  "type": "mondai2",
+  "version": 1,
+  "lastUpdated": "2026-03-01",
+  "questions": [
+    {
+      "id": "m2-sample-q1",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "彼の発言は（　　）で、真意がつかめなかった。",
+      "choices": ["曖昧", "明快", "素朴", "厳密"],
+      "correctIndex": 0,
+      "explanation": "「曖昧」（あいまい）意思是模糊不清。因為後面說「無法掌握真意」，所以答案是表達不清楚、含混的「曖昧」。"
+    },
+    {
+      "id": "m2-sample-q2",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "その計画は（　　）的に見直す必要がある。",
+      "choices": ["抜本", "根本", "基本", "徹底"],
+      "correctIndex": 0,
+      "explanation": "「抜本的」（ばっぽんてき）意思是從根本上的、徹底的。常搭配「見直す」使用，表示從根本上重新審視。"
+    },
+    {
+      "id": "m2-sample-q3",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "彼女は困難に直面しても、決して（　　）しなかった。",
+      "choices": ["動揺", "感動", "興奮", "緊張"],
+      "correctIndex": 0,
+      "explanation": "「動揺」（どうよう）意思是動搖、慌張。面對困難也不動搖，語意最通順。"
+    },
+    {
+      "id": "m2-sample-q4",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "新しい法律は来月から（　　）される。",
+      "choices": ["施行", "実行", "遂行", "執行"],
+      "correctIndex": 0,
+      "explanation": "「施行」（しこう）是法律開始生效的意思。法律搭配「施行」是固定用法。"
+    }
+  ]
+}

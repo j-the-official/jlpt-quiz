@@ -1,0 +1,51 @@
+{
+  "type": "mondai5",
+  "version": 1,
+  "lastUpdated": "2026-03-01",
+  "questions": [
+    {
+      "id": "m5-sample-q1",
+      "type": "mondai5",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "日本に来た（　　）、富士山に登ってみたい。",
+      "choices": ["からには", "ものなら", "とすれば", "にしても"],
+      "correctIndex": 0,
+      "explanation": "「からには」表示「既然...就...」。既然來了日本，就想爬富士山。表達決心或當然的行為。"
+    },
+    {
+      "id": "m5-sample-q2",
+      "type": "mondai5",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "あの映画は見れば見る（　　）、深い意味が分かってくる。",
+      "choices": ["ほど", "だけ", "ばかり", "くらい"],
+      "correctIndex": 0,
+      "explanation": "「～ば～ほど」是固定句型，表示「越...越...」。看得越多越能理解深層含義。"
+    },
+    {
+      "id": "m5-sample-q3",
+      "type": "mondai5",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "この問題は私の力（　　）解決できるものではない。",
+      "choices": ["をもってしても", "にかけても", "をおいて", "ともなると"],
+      "correctIndex": 0,
+      "explanation": "「をもってしても」意思是「即使用...也...」。即使用我的能力也無法解決這個問題。"
+    },
+    {
+      "id": "m5-sample-q4",
+      "type": "mondai5",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "彼女の話を聞く（　　）、涙を禁じ得なかった。",
+      "choices": ["につけ", "に至り", "にあたり", "に際し"],
+      "correctIndex": 0,
+      "explanation": "「～につけ」表示「每當...就...」。每當聽到她的故事就忍不住流淚。「涙を禁じ得ない」也是N1常考表達。"
+    }
+  ]
+}
