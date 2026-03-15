@@ -23,7 +23,29 @@
       "Bash(curl:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(/Users/J/.nvm/versions/node/v22.19.0/bin/codex review --uncommitted)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "WebFetch(domain:nihonez.com)",
+      "WebFetch(domain:unpkg.com)",
+      "Bash(npx ng serve:*)",
+      "WebFetch(domain:www.jlpt.jp)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx http-server:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --screenshot=/tmp/jlpt-landing.png --window-size=800,900 --disable-gpu http://localhost:4200/)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --screenshot=/tmp/jlpt-landing2.png --window-size=800,900 --disable-gpu http://localhost:4200/)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --screenshot=/tmp/aws-landing.png --window-size=800,900 --disable-gpu http://localhost:8000/)",
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome:*)",
+      "Bash(/Users/J/GitHub/jlpt-quiz/test-drill.html << 'HTMLEOF'\n<!DOCTYPE html>\n<html lang=\"zh-Hant\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n<button class=\"theme-toggle\" onclick=\"toggleTheme\\(\\)\" id=\"themeBtn\"></button>\n<div id=\"app\"></div>\n<script src=\"app.js\"></script>\n<script>setTimeout\\(\\(\\)=>startDrill\\('mondai1'\\),1500\\)</script>\n</body>\n</html>\nHTMLEOF)",
+      "Bash(__NEW_LINE_a2c1e147a46c18b0__ cat)",
+      "Bash(/Users/J/GitHub/aws-quiz/test-drill.html << 'HTMLEOF'\n<!DOCTYPE html>\n<html lang=\"zh-Hant\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n<button class=\"theme-toggle\" onclick=\"toggleTheme\\(\\)\" id=\"themeBtn\"></button>\n<div id=\"app\"></div>\n<script src=\"app.js\"></script>\n<script>setTimeout\\(\\(\\)=>{selectExam\\('clf-c02'\\);setTimeout\\(\\(\\)=>startQuiz\\(\\),500\\)},1500\\)</script>\n</body>\n</html>\nHTMLEOF)",
+      "Bash(npx @tailwindcss/cli:*)",
+      "Bash(/tmp/jlpt-light-test.html << 'HTMLEOF'\n<!DOCTYPE html><html lang=\"zh-Hant\"><head>\n<meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"http://localhost:4200/style.css\">\n</head><body>\n<button class=\"theme-toggle\" onclick=\"toggleTheme\\(\\)\" id=\"themeBtn\"></button>\n<div id=\"app\"></div>\n<script>localStorage.setItem\\('jlpt-n1-theme','light'\\)</script>\n<script src=\"http://localhost:4200/app.js\"></script>\n</body></html>\nHTMLEOF)",
+      "Bash(pip3 install:*)"
     ]
   }
 }

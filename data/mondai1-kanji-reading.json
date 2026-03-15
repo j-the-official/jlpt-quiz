@@ -1,0 +1,223 @@
+{
+  "type": "mondai1",
+  "version": 1,
+  "lastUpdated": "2026-03-01",
+  "questions": [
+    {
+      "id": "m1-2025jul-q1",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "__余暇__の楽しみ方はいろいろある。",
+      "targetWord": "余暇",
+      "targetReading": "よか",
+      "choices": [
+        "ようか",
+        "よか",
+        "よが",
+        "ようが"
+      ],
+      "correctIndex": 1,
+      "explanation": "「余暇」讀作「よか」。指從工作或義務中解放出來的自由時間。"
+    },
+    {
+      "id": "m1-2025jul-q2",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "その動物は動きが__鈍い__。",
+      "targetWord": "鈍い",
+      "targetReading": "にぶい",
+      "choices": [
+        "するどい",
+        "にぶい",
+        "あらい",
+        "あやうい"
+      ],
+      "correctIndex": 1,
+      "explanation": "「鈍い」讀作「にぶい」。指動作遲緩、反應遲鈍。"
+    },
+    {
+      "id": "m1-2025jul-q3",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "__検閲__は行われていない。",
+      "targetWord": "検閲",
+      "targetReading": "けんえつ",
+      "choices": [
+        "けんせき",
+        "けんえき",
+        "けんせつ",
+        "けんえつ"
+      ],
+      "correctIndex": 3,
+      "explanation": "「検閲」讀作「けんえつ」。指政府等對書籍、出版物進行審查及管制。"
+    },
+    {
+      "id": "m1-2025jul-q4",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "彼の唱える理念は__崇高__なものだ。",
+      "targetWord": "崇高",
+      "targetReading": "すうこう",
+      "choices": [
+        "すうこう",
+        "しゅうこう",
+        "しょうこう",
+        "そうこう"
+      ],
+      "correctIndex": 0,
+      "explanation": "「崇高」讀作「すうこう」。指高尚且尊貴。"
+    },
+    {
+      "id": "m1-2025jul-q5",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "自分には__裁く__ことはできなかった。",
+      "targetWord": "裁く",
+      "targetReading": "さばく",
+      "choices": [
+        "あばく",
+        "つらぬく",
+        "あざむく",
+        "さばく"
+      ],
+      "correctIndex": 3,
+      "explanation": "「裁く」讀作「さばく」。指判斷善惡是非並加以處置。"
+    },
+    {
+      "id": "m1-2025jul-q6",
+      "type": "mondai1",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "親友に、複雑な__胸中__を打ち明ける。",
+      "targetWord": "胸中",
+      "targetReading": "きょうじゅう",
+      "choices": [
+        "きょうじゅう",
+        "きゅうちゅう",
+        "きょうちゅう",
+        "きゅうじゅう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「胸中」讀作「きょうちゅう」。指心中的想法或感受。"
+    },
+    {
+      "id": "m1-2024dec-q1",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "佐藤選手がゴールを決めたとき、観客は__絶叫__した。",
+      "targetWord": "絶叫",
+      "targetReading": "ぜっきょう",
+      "choices": [
+        "せっきょう",
+        "ぜっきょう",
+        "ぜっきゅう",
+        "せっきゅう"
+      ],
+      "correctIndex": 1,
+      "explanation": "「絶叫」讀作「ぜっきょう」。指用非常大的聲音叫喊。"
+    },
+    {
+      "id": "m1-2024dec-q2",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "__背後__から物音が聞こえた。",
+      "targetWord": "背後",
+      "targetReading": "はいご",
+      "choices": [
+        "はいご",
+        "はいこう",
+        "せいご",
+        "せいこう"
+      ],
+      "correctIndex": 0,
+      "explanation": "「背後」讀作「はいご」。指後方、背部的方向。"
+    },
+    {
+      "id": "m1-2024dec-q3",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "将来の__抱負__を述べる。",
+      "targetWord": "抱負",
+      "targetReading": "ほうふ",
+      "choices": [
+        "ほうふ",
+        "ほうぶ",
+        "ほふ",
+        "ほぶ"
+      ],
+      "correctIndex": 0,
+      "explanation": "「抱負」讀作「ほうふ」。指心中懷抱的決心或計畫。"
+    },
+    {
+      "id": "m1-2024dec-q4",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "人を__侮って__はいけない。",
+      "targetWord": "侮って",
+      "targetReading": "あなどって",
+      "choices": [
+        "からかって",
+        "ののしって",
+        "あなどって",
+        "うらぎって"
+      ],
+      "correctIndex": 2,
+      "explanation": "「侮る」讀作「あなどる」。指輕視對方、看不起人。"
+    },
+    {
+      "id": "m1-2024dec-q5",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "相手がわかるように、__筋道__を立てて説明した。",
+      "targetWord": "筋道",
+      "targetReading": "すじみち",
+      "choices": [
+        "きんどう",
+        "すじどう",
+        "きんみち",
+        "すじみち"
+      ],
+      "correctIndex": 3,
+      "explanation": "「筋道」讀作「すじみち」。指事物的道理、順序。"
+    },
+    {
+      "id": "m1-2024dec-q6",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "その小説の主人公は、__奔放__な性格をしている。",
+      "targetWord": "奔放",
+      "targetReading": "ほんぽう",
+      "choices": [
+        "はんぽう",
+        "ぼんぼう",
+        "ほんぽう",
+        "ばんぽう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「奔放」讀作「ほんぽう」。指不受常識或規則束縛、自由自在的樣子。"
+    }
+  ]
+}

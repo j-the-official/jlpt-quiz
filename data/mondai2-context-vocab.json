@@ -1,0 +1,231 @@
+{
+  "type": "mondai2",
+  "version": 1,
+  "lastUpdated": "2026-03-01",
+  "questions": [
+    {
+      "id": "m2-2025jul-q1",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "二つの会社の（　　）によって、国内最大規模の食品会社が誕生した。",
+      "choices": [
+        "合併",
+        "連鎖",
+        "合致",
+        "連帯"
+      ],
+      "correctIndex": 0,
+      "explanation": "「合併」指兩個以上的組織合為一體，最符合文意。"
+    },
+    {
+      "id": "m2-2025jul-q2",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "中山さんは（　　）が器用で、子どもたちの洋服はすべて自分で作っているそうだ。",
+      "choices": [
+        "手元",
+        "手芸",
+        "手先",
+        "手際"
+      ],
+      "correctIndex": 2,
+      "explanation": "「手先が器用」是表示手指靈巧、善於細緻作業的慣用表達。"
+    },
+    {
+      "id": "m2-2025jul-q3",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "彼はまだ19歳だが、20歳以上が参加できるイベントに年齢を（　　）参加しようとした。",
+      "choices": [
+        "惑わして",
+        "ごまかして",
+        "裏切って",
+        "くらまして"
+      ],
+      "correctIndex": 1,
+      "explanation": "「ごまかす」指隱瞞真相、偽造。符合謊報年齡試圖參加的語境。"
+    },
+    {
+      "id": "m2-2025jul-q4",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "活動報告の案をまとめたので、確認のうえ、足りない点があれば（　　）してください。",
+      "choices": [
+        "混入",
+        "添加",
+        "加筆",
+        "注入"
+      ],
+      "correctIndex": 2,
+      "explanation": "「加筆」指在文章中增添內容，最符合補充報告書內容的語境。"
+    },
+    {
+      "id": "m2-2025jul-q5",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "原田さんは育児で何年も（　　）があったが、資格を取得し、再就職が決まったそうだ。",
+      "choices": [
+        "ブランク",
+        "オフ",
+        "フリー",
+        "ブレイク"
+      ],
+      "correctIndex": 0,
+      "explanation": "「ブランク」指空白期間。符合因育兒而有工作經歷空白的語境。"
+    },
+    {
+      "id": "m2-2025jul-q6",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "近ごろの彼女の態度から、彼女の気持ちが変わったことには（　　）気づいていた。",
+      "choices": [
+        "そよそよ",
+        "うすうす",
+        "ひんやり",
+        "しっとり"
+      ],
+      "correctIndex": 1,
+      "explanation": "「うすうす」是隱約、模糊地之意的副詞。符合隱約察覺到的語境。"
+    },
+    {
+      "id": "m2-2025jul-q7",
+      "type": "mondai2",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 7,
+      "sentence": "古い曲を聞いていたら、子どものころの友の顔が（　　）に浮かんだ。",
+      "choices": [
+        "内心",
+        "頭上",
+        "眼下",
+        "脳裏"
+      ],
+      "correctIndex": 3,
+      "explanation": "「脳裏に浮かぶ」是浮現在腦海中的慣用表達。"
+    },
+    {
+      "id": "m2-2024dec-q1",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "その生物は、厳しい環境に（　　）できる能力を持っている。",
+      "choices": [
+        "適応",
+        "合致",
+        "転換",
+        "推移"
+      ],
+      "correctIndex": 0,
+      "explanation": "「適応」指配合環境等而變化、應對。符合適應嚴苛環境的語境。"
+    },
+    {
+      "id": "m2-2024dec-q2",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "店の売り上げを五年で二倍にするという目標を（　　）、みんなで努力している。",
+      "choices": [
+        "企て",
+        "興して",
+        "築いて",
+        "掲げて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「掲げる」指高舉目標、旗幟等。「目標を掲げる（揭示目標）」是正確的慣用表達。"
+    },
+    {
+      "id": "m2-2024dec-q3",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "新しい市長は前市長の政策を（　　）し、駅前の開発を進めると述べた。",
+      "choices": [
+        "相続",
+        "獲得",
+        "踏襲",
+        "伝承"
+      ],
+      "correctIndex": 2,
+      "explanation": "「踏襲」指原封不動地繼承前任的做法或方針。「踏襲政策（沿襲政策）」的用法正確。"
+    },
+    {
+      "id": "m2-2024dec-q4",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "台風で電車の到着が大幅に遅れたため、駅でしばらく（　　）された。",
+      "choices": [
+        "息抜き",
+        "棚上げ",
+        "待ち伏せ",
+        "足止め"
+      ],
+      "correctIndex": 3,
+      "explanation": "「足止め」指被阻止移動或行動。符合因颱風在車站被困住的語境。"
+    },
+    {
+      "id": "m2-2024dec-q5",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "今日は試合で一日中走り続けたので、疲れて（　　）になった。",
+      "choices": [
+        "めちゃめちゃ",
+        "へとへと",
+        "どろどろ",
+        "ぐちゃぐちゃ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「へとへと」是表示精疲力竭狀態的擬態語。符合極度疲勞的語境。"
+    },
+    {
+      "id": "m2-2024dec-q6",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "工場の誘致について、市長が丁寧に説明し、住民の不安の（　　）に努めた。",
+      "choices": [
+        "払拭",
+        "喪失",
+        "破棄",
+        "排斥"
+      ],
+      "correctIndex": 0,
+      "explanation": "「払拭」指完全消除不安或疑慮。「不安の払拭（消除不安）」的用法正確。"
+    },
+    {
+      "id": "m2-2024dec-q7",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 7,
+      "sentence": "階段でつまずいて転びそうになったので、（　　）隣にいた友人の腕をつかんだ。",
+      "choices": [
+        "じきに",
+        "いまに",
+        "とっさに",
+        "とっくに"
+      ],
+      "correctIndex": 2,
+      "explanation": "「とっさに」指瞬間地、反射性地。符合差點跌倒時瞬間抓住手臂的語境。"
+    }
+  ]
+}

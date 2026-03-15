@@ -1,0 +1,211 @@
+{
+  "type": "mondai3",
+  "version": 1,
+  "lastUpdated": "2026-03-01",
+  "questions": [
+    {
+      "id": "m3-2025jul-q1",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "まだいくつか__着手していない__仕事がある。",
+      "targetWord": "着手していない",
+      "choices": [
+        "終わらせて",
+        "引き受けて",
+        "始めて",
+        "やり直して"
+      ],
+      "correctIndex": 2,
+      "explanation": "「着手する」指開始做某事。「着手していない」＝還沒開始。"
+    },
+    {
+      "id": "m3-2025jul-q2",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "この__トレンド__は、しばらく続くと見られている。",
+      "targetWord": "トレンド",
+      "choices": [
+        "関係",
+        "議論",
+        "混乱",
+        "傾向"
+      ],
+      "correctIndex": 3,
+      "explanation": "「トレンド」指流行、趨勢。「傾向」是最接近的意思。"
+    },
+    {
+      "id": "m3-2025jul-q3",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "中川さんは、転職した会社で__破格の__待遇を受けたらしい。",
+      "targetWord": "破格の",
+      "choices": [
+        "最も低い",
+        "不公平な",
+        "希望どおりの",
+        "特別によい"
+      ],
+      "correctIndex": 3,
+      "explanation": "「破格」指大幅偏離通常的標準或規格。此處指特別優厚的待遇。"
+    },
+    {
+      "id": "m3-2025jul-q4",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "小学生のころ、友達を__冷やかして__しかられた。",
+      "targetWord": "冷やかして",
+      "choices": [
+        "だまして",
+        "からかって",
+        "驚かせて",
+        "たたいて"
+      ],
+      "correctIndex": 1,
+      "explanation": "「冷やかす」指嘲弄對方。「からかって（取笑）」是最接近的意思。"
+    },
+    {
+      "id": "m3-2025jul-q5",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "話を聞いた大木さんは、__けげんな__顔をした。",
+      "targetWord": "けげんな",
+      "choices": [
+        "傷ついたような",
+        "あきれたような",
+        "不思議そうな",
+        "残念そうな"
+      ],
+      "correctIndex": 2,
+      "explanation": "「けげん（怪訝）」指感到不可思議、疑惑的樣子。「不思議そうな（疑惑的）」最接近。"
+    },
+    {
+      "id": "m3-2025jul-q6",
+      "type": "mondai3",
+      "year": 2025,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "娘は反抗期なので、親の言うことに__ことごとく__反対する。",
+      "targetWord": "ことごとく",
+      "choices": [
+        "すべて",
+        "激しく",
+        "しつこく",
+        "わざと"
+      ],
+      "correctIndex": 0,
+      "explanation": "「ことごとく」是全部、無一例外之意的副詞。"
+    },
+    {
+      "id": "m3-2024dec-q1",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "社長は小林部長の__手腕__を高く評価しているようだ。",
+      "targetWord": "手腕",
+      "choices": [
+        "経験",
+        "能力",
+        "考え",
+        "人柄"
+      ],
+      "correctIndex": 1,
+      "explanation": "「手腕」指巧妙處理事務的能力、本領。「能力」最接近。"
+    },
+    {
+      "id": "m3-2024dec-q2",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "時間を__ロスして__しまった。",
+      "targetWord": "ロスして",
+      "choices": [
+        "間違えて",
+        "無駄にして",
+        "かいて",
+        "延長して"
+      ],
+      "correctIndex": 1,
+      "explanation": "「ロスする」指浪費、損失。「無駄にして（浪費了）」是最接近的意思。"
+    },
+    {
+      "id": "m3-2024dec-q3",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "確認が__おろそか__になっていた。",
+      "targetWord": "おろそか",
+      "choices": [
+        "めんどうくさ",
+        "困難に",
+        "遅く",
+        "いいかげん"
+      ],
+      "correctIndex": 3,
+      "explanation": "「おろそか」指注意力不足、馬虎的樣子。「いいかげん（馬虎）」最接近。"
+    },
+    {
+      "id": "m3-2024dec-q4",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "私たちのチームの__目下の__目標は、市の大会で優勝することだ。",
+      "targetWord": "目下の",
+      "choices": [
+        "最大",
+        "将来",
+        "今",
+        "最低限"
+      ],
+      "correctIndex": 2,
+      "explanation": "「目下」指目前、當下。「今（現在）」最接近。"
+    },
+    {
+      "id": "m3-2024dec-q5",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "経費を考慮したうえで、古いアパートの改修工事を__請け負う__ことにした。",
+      "targetWord": "請け負う",
+      "choices": [
+        "引き受ける",
+        "申し込む",
+        "断る",
+        "諦める"
+      ],
+      "correctIndex": 0,
+      "explanation": "「請け負う」指承攬工作或責任。「引き受ける（承接）」最接近。"
+    },
+    {
+      "id": "m3-2024dec-q6",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "先生に本を__進呈__しました。",
+      "targetWord": "進呈",
+      "choices": [
+        "差し上げました",
+        "いただきました",
+        "お貸ししました",
+        "お借りしました"
+      ],
+      "correctIndex": 0,
+      "explanation": "「進呈する」指向地位較高的人呈獻物品。「差し上げました（敬獻了）」最接近。"
+    }
+  ]
+}
