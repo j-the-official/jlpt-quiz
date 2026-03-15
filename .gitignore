@@ -20,17 +20,14 @@ pnpm-debug.log*
 !.env.example
 
 # Local tool settings
-/.claude/settings.local.json
+/.claude/
 
 # Scratch files for local UI checks
 /test-*.html
 
 # Editors
 .idea/
-.vscode/*
-!.vscode/extensions.json
-!.vscode/launch.json
-!.vscode/tasks.json
+/.vscode/
 *.swp
 *.swo
 
