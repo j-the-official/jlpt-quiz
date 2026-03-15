@@ -1,5 +1,7 @@
 {
   "name": "jlpt-quiz",
-  "pages_build_output_dir": ".",
-  "compatibility_date": "2026-03-15"
+  "compatibility_date": "2026-03-15",
+  "assets": {
+    "directory": "."
+  }
 }
