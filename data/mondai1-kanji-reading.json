@@ -1,7 +1,7 @@
 {
   "type": "mondai1",
   "version": 1,
-  "lastUpdated": "2026-03-01",
+  "lastUpdated": "2026-03-20",
   "questions": [
     {
       "id": "m1-2025jul-q1",
@@ -218,6 +218,870 @@
       ],
       "correctIndex": 2,
       "explanation": "「奔放」讀作「ほんぽう」。指不受常識或規則束縛、自由自在的樣子。"
+    },
+    {
+      "id": "m1-2020dec-q1",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "自分の将来について、他人には__干渉__されたくない。",
+      "targetWord": "干渉",
+      "targetReading": "かんしょう",
+      "choices": [
+        "がんしょう",
+        "かんしょう",
+        "がんぽ",
+        "かんぽ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「干渉」讀作「かんしょう」。指介入他人的事務。"
+    },
+    {
+      "id": "m1-2020dec-q2",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "田中選手は、最後まで__粘って__、ついに勝利を収めた。",
+      "targetWord": "粘って",
+      "targetReading": "ねばって",
+      "choices": [
+        "ねばって",
+        "あらそって",
+        "きそって",
+        "ふんばって"
+      ],
+      "correctIndex": 0,
+      "explanation": "「粘る」讀作「ねばる」。指堅持不放棄。"
+    },
+    {
+      "id": "m1-2020dec-q3",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "手品師の__巧妙__なテクニックに観客から拍手が起こった。",
+      "targetWord": "巧妙",
+      "targetReading": "こうみょう",
+      "choices": [
+        "こうびょう",
+        "こびょう",
+        "こうみょう",
+        "こみょう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「巧妙」讀作「こうみょう」。指手法精巧高明。"
+    },
+    {
+      "id": "m1-2020dec-q4",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "書類にミスがあったので、すぐに修正を__促した__。",
+      "targetWord": "促した",
+      "targetReading": "うながした",
+      "choices": [
+        "すました",
+        "ほどこした",
+        "せかした",
+        "うながした"
+      ],
+      "correctIndex": 3,
+      "explanation": "「促す」讀作「うながす」。指催促對方採取行動。"
+    },
+    {
+      "id": "m1-2020dec-q5",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "適切な__措置__によって、問題が拡大するのを防ぐことができた。",
+      "targetWord": "措置",
+      "targetReading": "そち",
+      "choices": [
+        "そち",
+        "そうち",
+        "しょち",
+        "しょうち"
+      ],
+      "correctIndex": 0,
+      "explanation": "「措置」讀作「そち」。指為解決問題而採取的手段或處置。"
+    },
+    {
+      "id": "m1-2020dec-q6",
+      "type": "mondai1",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "スポーツを通じて、地域の__振興__を図りたい。",
+      "targetWord": "振興",
+      "targetReading": "しんこう",
+      "choices": [
+        "しんきょう",
+        "じんきょう",
+        "じんこう",
+        "しんこう"
+      ],
+      "correctIndex": 3,
+      "explanation": "「振興」讀作「しんこう」。指促進發展繁榮。"
+    },
+    {
+      "id": "m1-2021jul-q1",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "今回の件については、大変__遺憾__に思っております。",
+      "targetWord": "遺憾",
+      "targetReading": "いかん",
+      "choices": [
+        "いがい",
+        "いかん",
+        "いかく",
+        "いかり"
+      ],
+      "correctIndex": 1,
+      "explanation": "「遺憾」讀作「いかん」。指對某事感到遺憾、惋惜。"
+    },
+    {
+      "id": "m1-2021jul-q2",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "この門は常時__閉鎖__されている。",
+      "targetWord": "閉鎖",
+      "targetReading": "へいさ",
+      "choices": [
+        "へいそく",
+        "へいさく",
+        "へいそ",
+        "へいさ"
+      ],
+      "correctIndex": 3,
+      "explanation": "「閉鎖」讀作「へいさ」。指關閉、封鎖。"
+    },
+    {
+      "id": "m1-2021jul-q3",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "どんな時にも、周りへの__心遣い__を忘れてはいけない。",
+      "targetWord": "心遣い",
+      "targetReading": "こころづかい",
+      "choices": [
+        "こころあつかい",
+        "こころづかい",
+        "こころうかがい",
+        "こころよい"
+      ],
+      "correctIndex": 1,
+      "explanation": "「心遣い」讀作「こころづかい」。指體貼、關懷他人的心意。"
+    },
+    {
+      "id": "m1-2021jul-q4",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "彼は顔を真っ赤にして__憤った__。",
+      "targetWord": "憤った",
+      "targetReading": "いきどおった",
+      "choices": [
+        "どなった",
+        "ののしった",
+        "いきどおった",
+        "うなった"
+      ],
+      "correctIndex": 2,
+      "explanation": "「憤る」讀作「いきどおる」。指對不合理的事感到非常憤怒。"
+    },
+    {
+      "id": "m1-2021jul-q5",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "__貧富__の差が大きくなっているようだ。",
+      "targetWord": "貧富",
+      "targetReading": "ひんぷ",
+      "choices": [
+        "びんぷ",
+        "ひんぷう",
+        "ひんぷ",
+        "びんぷう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「貧富」讀作「ひんぷ」。指貧窮與富裕。"
+    },
+    {
+      "id": "m1-2021jul-q6",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "__治癒__するには１か月程度かかる。",
+      "targetWord": "治癒",
+      "targetReading": "ちゆ",
+      "choices": [
+        "ちゆ",
+        "ちよ",
+        "じゆ",
+        "じよ"
+      ],
+      "correctIndex": 0,
+      "explanation": "「治癒」讀作「ちゆ」。指疾病痊癒、治好。"
+    },
+    {
+      "id": "m1-2021dec-q1",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "この絵は目の__錯覚__を利用した作品です。",
+      "targetWord": "錯覚",
+      "targetReading": "さっかく",
+      "choices": [
+        "しゃかく",
+        "しゃっかく",
+        "さかく",
+        "さっかく"
+      ],
+      "correctIndex": 3,
+      "explanation": "「錯覚」讀作「さっかく」。指視覺或感覺上的誤認。"
+    },
+    {
+      "id": "m1-2021dec-q2",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "__尊い__命を大切に守ろう。",
+      "targetWord": "尊い",
+      "targetReading": "とうとい",
+      "choices": [
+        "あやうい",
+        "おさない",
+        "とうとい",
+        "はかない"
+      ],
+      "correctIndex": 2,
+      "explanation": "「尊い」讀作「とうとい」。指尊貴的、珍貴的。"
+    },
+    {
+      "id": "m1-2021dec-q3",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "このまま使い続けていたら、天然資源はいずれ__枯渇__してしまうだろう。",
+      "targetWord": "枯渇",
+      "targetReading": "こかつ",
+      "choices": [
+        "こかつ",
+        "こけい",
+        "かかつ",
+        "かけい"
+      ],
+      "correctIndex": 0,
+      "explanation": "「枯渇」讀作「こかつ」。指資源乾涸、用盡。"
+    },
+    {
+      "id": "m1-2021dec-q4",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "その手紙は、私の心を__慰めて__くれた。",
+      "targetWord": "慰めて",
+      "targetReading": "なぐさめて",
+      "choices": [
+        "なだめて",
+        "なぐさめて",
+        "あらためて",
+        "とどめて"
+      ],
+      "correctIndex": 1,
+      "explanation": "「慰める」讀作「なぐさめる」。指安慰、撫慰。"
+    },
+    {
+      "id": "m1-2021dec-q5",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "この文書には、当時の生活の様子が__克明__に記憶されている。",
+      "targetWord": "克明",
+      "targetReading": "こくめい",
+      "choices": [
+        "きょくめい",
+        "きょうめい",
+        "こくめい",
+        "こうめい"
+      ],
+      "correctIndex": 2,
+      "explanation": "「克明」讀作「こくめい」。指詳細而清楚地記載。"
+    },
+    {
+      "id": "m1-2021dec-q6",
+      "type": "mondai1",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "試合会場には__緊迫__した雰囲気が漂っていた。",
+      "targetWord": "緊迫",
+      "targetReading": "きんぱく",
+      "choices": [
+        "きんぱく",
+        "ぎんぱく",
+        "きんばく",
+        "ぎんばく"
+      ],
+      "correctIndex": 0,
+      "explanation": "「緊迫」讀作「きんぱく」。指氣氛緊張。"
+    },
+    {
+      "id": "m1-2022jul-q1",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "__勇敢__に戦う主人公に子どもたちは夢中だ。",
+      "targetWord": "勇敢",
+      "targetReading": "ゆうかん",
+      "choices": [
+        "ゆうかん",
+        "ゆうがん",
+        "ゆうけん",
+        "ゆうげん"
+      ],
+      "correctIndex": 0,
+      "explanation": "「勇敢」的讀音是「ゆうかん」。意為勇敢、有勇氣。"
+    },
+    {
+      "id": "m1-2022jul-q2",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "その件について、__忠告__すべきかどうか考えている。",
+      "targetWord": "忠告",
+      "targetReading": "ちゅうこく",
+      "choices": [
+        "しんこく",
+        "じゅうこく",
+        "ちゅうこく",
+        "じんこく"
+      ],
+      "correctIndex": 2,
+      "explanation": "「忠告」的讀音是「ちゅうこく」。意為忠告、勸告。"
+    },
+    {
+      "id": "m1-2022jul-q3",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "チームの多くの選手が監督を__慕って__いるようだ。",
+      "targetWord": "慕って",
+      "targetReading": "したって",
+      "choices": [
+        "いたわって",
+        "うやまって",
+        "したって",
+        "かばって"
+      ],
+      "correctIndex": 2,
+      "explanation": "「慕う（したう）」意為仰慕、愛慕。「慕って」的讀音是「したって」。"
+    },
+    {
+      "id": "m1-2022jul-q4",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "建物の入口は、夜間は__施錠__されている。",
+      "targetWord": "施錠",
+      "targetReading": "せじょう",
+      "choices": [
+        "せいてい",
+        "せてい",
+        "せいじょう",
+        "せじょう"
+      ],
+      "correctIndex": 3,
+      "explanation": "「施錠」的讀音是「せじょう」。意為上鎖。"
+    },
+    {
+      "id": "m1-2022jul-q5",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "対策の結果、地盤の__沈下__は食い止められている。",
+      "targetWord": "沈下",
+      "targetReading": "ちんか",
+      "choices": [
+        "ちんげ",
+        "ちんか",
+        "しんか",
+        "しんげ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「沈下」的讀音是「ちんか」。意為下沉。"
+    },
+    {
+      "id": "m1-2022jul-q6",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "激しい雪に__阻まれて__前に進めない。",
+      "targetWord": "阻まれて",
+      "targetReading": "はばまれて",
+      "choices": [
+        "かこむ",
+        "からむ",
+        "こばむ",
+        "はばむ"
+      ],
+      "correctIndex": 3,
+      "explanation": "「阻む（はばむ）」意為阻擋、妨礙。「阻まれて」讀作「はばまれて」。"
+    },
+    {
+      "id": "m1-2022dec-q1",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "チームの新しい__監督__が決まった。",
+      "targetWord": "監督",
+      "targetReading": "かんとく",
+      "choices": [
+        "かんどく",
+        "がんどく",
+        "かんとく",
+        "がんとく"
+      ],
+      "correctIndex": 2,
+      "explanation": "「監督」的讀音是「かんとく」。意為監督、導演。"
+    },
+    {
+      "id": "m1-2022dec-q2",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "これは、外国語から__派生__した言葉です。",
+      "targetWord": "派生",
+      "targetReading": "はせい",
+      "choices": [
+        "はしょう",
+        "はせい",
+        "はっしょう",
+        "はっせい"
+      ],
+      "correctIndex": 1,
+      "explanation": "「派生」的讀音是「はせい」。意為派生、衍生。"
+    },
+    {
+      "id": "m1-2022dec-q3",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "文字が__透けて__いる。",
+      "targetWord": "透けて",
+      "targetReading": "すけて",
+      "choices": [
+        "ぼけて",
+        "かけて",
+        "ぬけて",
+        "すけて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「透ける（すける）」意為透出、透明。「透けて」讀作「すけて」。"
+    },
+    {
+      "id": "m1-2022dec-q4",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "この村は湖の__恩恵__を受けている。",
+      "targetWord": "恩恵",
+      "targetReading": "おんけい",
+      "choices": [
+        "おんけい",
+        "おんえい",
+        "いんけい",
+        "いんえい"
+      ],
+      "correctIndex": 0,
+      "explanation": "「恩恵」的讀音是「おんけい」。意為恩惠、好處。"
+    },
+    {
+      "id": "m1-2022dec-q5",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "厳しい練習に__臨む__選手たちの姿を目にした。",
+      "targetWord": "臨む",
+      "targetReading": "のぞむ",
+      "choices": [
+        "いどむ",
+        "はげむ",
+        "なやむ",
+        "のぞむ"
+      ],
+      "correctIndex": 3,
+      "explanation": "「臨む（のぞむ）」意為面臨、出席。面對嚴格的練習。"
+    },
+    {
+      "id": "m1-2022dec-q6",
+      "type": "mondai1",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "調査データは、地球の温暖化を__如実__に示した。",
+      "targetWord": "如実",
+      "targetReading": "にょじつ",
+      "choices": [
+        "じょじつに",
+        "じょうじつに",
+        "にょじつに",
+        "にょうじつに"
+      ],
+      "correctIndex": 2,
+      "explanation": "「如実（にょじつ）」意為如實、真實地。調查數據如實展現了地球暖化。"
+    },
+    {
+      "id": "m1-2023jul-q1",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "思わぬ出来事に、周りが__騒然__としていた。",
+      "targetWord": "騒然",
+      "targetReading": "そうぜん",
+      "choices": [
+        "ぼぜん",
+        "そぜん",
+        "ぼうぜん",
+        "そうぜん"
+      ],
+      "correctIndex": 3,
+      "explanation": "「騒然」的讀音是「そうぜん」。意為騷動、嘈雜。"
+    },
+    {
+      "id": "m1-2023jul-q2",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "西村さんはいたずらした子供を優しく__諭した__。",
+      "targetWord": "諭した",
+      "targetReading": "さとした",
+      "choices": [
+        "さとした",
+        "あやした",
+        "ただした",
+        "いやした"
+      ],
+      "correctIndex": 0,
+      "explanation": "「諭す（さとす）」意為勸導、開導。溫柔地開導惡作劇的孩子。"
+    },
+    {
+      "id": "m1-2023jul-q3",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "社会生活を送る上で、__秩序__を守ることは重要だ。",
+      "targetWord": "秩序",
+      "targetReading": "ちつじょ",
+      "choices": [
+        "ちつじょう",
+        "じつじょ",
+        "ちつじょ",
+        "しつじょう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「秩序」的讀音是「ちつじょ」。意為秩序。"
+    },
+    {
+      "id": "m1-2023jul-q4",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "このあたりに犯人が__潜伏__しているという情報が入った。",
+      "targetWord": "潜伏",
+      "targetReading": "せんぷく",
+      "choices": [
+        "せんふく",
+        "ぜんぷく",
+        "ぜんふく",
+        "せんぷく"
+      ],
+      "correctIndex": 3,
+      "explanation": "「潜伏」的讀音是「せんぷく」。意為潛伏、躲藏。"
+    },
+    {
+      "id": "m1-2023jul-q5",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "アナウンサーの__朗らか__な声が響いた。",
+      "targetWord": "朗らか",
+      "targetReading": "ほがらか",
+      "choices": [
+        "きょらか",
+        "ほがらか",
+        "やわらか",
+        "なめらか"
+      ],
+      "correctIndex": 1,
+      "explanation": "「朗らか（ほがらか）」意為開朗、爽朗。主播爽朗的聲音響起。"
+    },
+    {
+      "id": "m1-2023jul-q6",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "新しい市長は地域文化の__振興__に力を入れている。",
+      "targetWord": "振興",
+      "targetReading": "しんこう",
+      "choices": [
+        "しんきょう",
+        "じんこう",
+        "しんこう",
+        "じんきょう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「振興」的讀音是「しんこう」。意為振興、促進。"
+    },
+    {
+      "id": "m1-202312-q1",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "ある画家の人生の__軌跡__を描いた映画を見た。",
+      "targetWord": "軌跡",
+      "targetReading": "きせき",
+      "choices": [
+        "きぜき",
+        "きせき",
+        "きゅうせき",
+        "きゅうぜき"
+      ],
+      "correctIndex": 1,
+      "explanation": "「軌跡」的讀音是「きせき」，意思是軌跡、足跡。「軌」讀作「き」，「跡」讀作「せき」。"
+    },
+    {
+      "id": "m1-202312-q2",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "ここに書いてある情報には__偏り__がある。",
+      "targetWord": "偏り",
+      "targetReading": "かたより",
+      "choices": [
+        "へだたり",
+        "かたより",
+        "あやまり",
+        "こだわり"
+      ],
+      "correctIndex": 1,
+      "explanation": "「偏り」的讀音是「かたより」，意思是偏差、不均衡。動詞「偏る」（かたよる）的名詞形。"
+    },
+    {
+      "id": "m1-202312-q3",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "村上氏の主張にはさまざまな__矛盾__が含まれている。",
+      "targetWord": "矛盾",
+      "targetReading": "むじゅん",
+      "choices": [
+        "むじゅん",
+        "むじょう",
+        "みじゅん",
+        "みじょう"
+      ],
+      "correctIndex": 0,
+      "explanation": "「矛盾」的讀音是「むじゅん」，意思是矛盾、不一致。「矛」讀作「む」，「盾」讀作「じゅん」。"
+    },
+    {
+      "id": "m1-202312-q4",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "事実が__誇張__されて伝わる。",
+      "targetWord": "誇張",
+      "targetReading": "こちょう",
+      "choices": [
+        "こうちょう",
+        "ごちょう",
+        "こちょう",
+        "ごうちょう"
+      ],
+      "correctIndex": 2,
+      "explanation": "「誇張」的讀音是「こちょう」，意思是誇張、誇大。「誇」讀作「こ」，「張」讀作「ちょう」。"
+    },
+    {
+      "id": "m1-202312-q5",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "この食堂で社員全員の昼食を__賄って__いる。",
+      "targetWord": "賄って",
+      "targetReading": "まかなって",
+      "choices": [
+        "ふるまって",
+        "になって",
+        "あつかって",
+        "まかなって"
+      ],
+      "correctIndex": 3,
+      "explanation": "「賄って」的讀音是「まかなって」，動詞「賄う」（まかなう）意思是供應、負擔（飲食費用等）。"
+    },
+    {
+      "id": "m1-202312-q6",
+      "type": "mondai1",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "__軽率__な行動が批判を招いた。",
+      "targetWord": "軽率",
+      "targetReading": "けいそつ",
+      "choices": [
+        "けいそつ",
+        "けいりつ",
+        "かいそつ",
+        "かいりつ"
+      ],
+      "correctIndex": 0,
+      "explanation": "「軽率」的讀音是「けいそつ」，意思是輕率、草率。「軽」讀作「けい」，「率」讀作「そつ」。"
+    },
+    {
+      "id": "m1-202407-q1",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "食品の__腐敗__を防止する",
+      "targetWord": "腐敗",
+      "targetReading": "ふはい",
+      "choices": [
+        "ふはい",
+        "ふばい",
+        "ふうはい",
+        "ふうばい"
+      ],
+      "correctIndex": 0,
+      "explanation": "「腐敗」的讀音是「ふはい」，意思是腐敗、腐爛。「腐」讀作「ふ」，「敗」讀作「はい」。"
+    },
+    {
+      "id": "m1-202407-q2",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "こちらの方が__粗い__ようだ。",
+      "targetWord": "粗い",
+      "targetReading": "あらい",
+      "choices": [
+        "にぶい",
+        "もろい",
+        "あらい",
+        "ゆるい"
+      ],
+      "correctIndex": 2,
+      "explanation": "「粗い」的讀音是「あらい」，意思是粗糙的、粗的。"
+    },
+    {
+      "id": "m1-202407-q3",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "これは胃の__粘膜__を保護する薬です。",
+      "targetWord": "粘膜",
+      "targetReading": "ねんまく",
+      "choices": [
+        "せんまく",
+        "ねんまく",
+        "ねんばく",
+        "せんばく"
+      ],
+      "correctIndex": 1,
+      "explanation": "「粘膜」的讀音是「ねんまく」，意思是黏膜。「粘」讀作「ねん」，「膜」讀作「まく」。"
+    },
+    {
+      "id": "m1-202407-q4",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "医学の進歩によって、人々の__寿命__が延びた。",
+      "targetWord": "寿命",
+      "targetReading": "じゅみょう",
+      "choices": [
+        "じゅうみょう",
+        "じゅみょう",
+        "じゅめい",
+        "じゅうめい"
+      ],
+      "correctIndex": 1,
+      "explanation": "「寿命」的讀音是「じゅみょう」，意思是壽命。「寿」讀作「じゅ」，「命」讀作「みょう」。"
+    },
+    {
+      "id": "m1-202407-q5",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "手紙の内容は私を__戒める__ものだった。",
+      "targetWord": "戒める",
+      "targetReading": "いましめる",
+      "choices": [
+        "とがめる",
+        "せめる",
+        "なぐさめる",
+        "いましめる"
+      ],
+      "correctIndex": 3,
+      "explanation": "「戒める」的讀音是「いましめる」，意思是告誡、警戒。"
+    },
+    {
+      "id": "m1-202407-q6",
+      "type": "mondai1",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "__誓約書__に署名する時、少し緊張した。",
+      "targetWord": "誓約書",
+      "targetReading": "せいやくしょ",
+      "choices": [
+        "けいやくしょ",
+        "せつやくしょ",
+        "せいやくしょ",
+        "けつやくしょ"
+      ],
+      "correctIndex": 2,
+      "explanation": "「誓約書」的讀音是「せいやくしょ」，意思是誓約書、宣誓書。「誓」讀作「せい」，「約」讀作「やく」，「書」讀作「しょ」。注意不要與「契約書」（けいやくしょ）混淆。"
     }
   ]
 }

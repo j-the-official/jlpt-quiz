@@ -1,7 +1,7 @@
 {
   "type": "mondai3",
   "version": 1,
-  "lastUpdated": "2026-03-01",
+  "lastUpdated": "2026-03-20",
   "questions": [
     {
       "id": "m3-2025jul-q1",
@@ -206,6 +206,822 @@
       ],
       "correctIndex": 0,
       "explanation": "「進呈する」指向地位較高的人呈獻物品。「差し上げました（敬獻了）」最接近。"
+    },
+    {
+      "id": "m3-2020dec-q1",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "それについてはエキスパートにも意見を聞いてみよう。",
+      "targetWord": "エキスパート",
+      "choices": [
+        "発明家",
+        "協力者",
+        "責任者",
+        "専門家"
+      ],
+      "correctIndex": 3,
+      "explanation": "「エキスパート」指專家。"
+    },
+    {
+      "id": "m3-2020dec-q2",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "兄は手にした新聞の記事を__凝視__した。",
+      "targetWord": "凝視",
+      "choices": [
+        "ざっと見た",
+        "じっと見た",
+        "ちらっと見た",
+        "ぼうっと見た"
+      ],
+      "correctIndex": 1,
+      "explanation": "「凝視」指目不轉睛地盯著看。"
+    },
+    {
+      "id": "m3-2020dec-q3",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "架空の人物を主人公にして物語を作った。",
+      "targetWord": "架空",
+      "choices": [
+        "素敵な",
+        "思い出の",
+        "想像の",
+        "変な"
+      ],
+      "correctIndex": 2,
+      "explanation": "「架空」指虛構的、想像的。"
+    },
+    {
+      "id": "m3-2020dec-q4",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "鈴木さんには、かねがね__お目にかかりたい__と思っておりました。",
+      "targetWord": "かねがね",
+      "choices": [
+        "できれば",
+        "以前から",
+        "ぜひ",
+        "早いうちに"
+      ],
+      "correctIndex": 1,
+      "explanation": "「かねがね」指很久以來、早就。"
+    },
+    {
+      "id": "m3-2020dec-q5",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "商品の原価が上がったが、販売価格への影響は__当面__ないだろう。",
+      "targetWord": "当面",
+      "choices": [
+        "しばらくは",
+        "直接は",
+        "まさか",
+        "大して"
+      ],
+      "correctIndex": 0,
+      "explanation": "「当面」指目前、暫時。"
+    },
+    {
+      "id": "m3-2020dec-q6",
+      "type": "mondai3",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "彼はいつも__ぼやいている__。",
+      "targetWord": "ぼやいて",
+      "choices": [
+        "冗談を言っている",
+        "わがままを言っている",
+        "愚痴を言っている",
+        "独り言を言っている"
+      ],
+      "correctIndex": 2,
+      "explanation": "「ぼやく」指發牢騷、抱怨。"
+    },
+    {
+      "id": "m3-2021jul-q1",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "祖父は__寡黙__な人だったそうだ。",
+      "targetWord": "寡黙",
+      "choices": [
+        "口数が少ない",
+        "知識に乏しい",
+        "意見が少ない",
+        "話題に乏しい"
+      ],
+      "correctIndex": 0,
+      "explanation": "「寡黙」指沉默寡言。與「口数が少ない（話少）」意思相近。"
+    },
+    {
+      "id": "m3-2021jul-q2",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "異なる意見が次々と出されて、会議は__紛糾__した。",
+      "targetWord": "紛糾",
+      "choices": [
+        "盛り上がった",
+        "長引いた",
+        "中断した",
+        "混乱した"
+      ],
+      "correctIndex": 3,
+      "explanation": "「紛糾」指意見紛歧而陷入混亂。與「混乱した」意思相近。"
+    },
+    {
+      "id": "m3-2021jul-q3",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "この様子だと、新薬の発売はかなり__ずれ込み__そうだ。",
+      "targetWord": "ずれ込み",
+      "choices": [
+        "早くなりそうだ",
+        "多くなりそうだ",
+        "遅くなりそうだ",
+        "少なくなりそうだ"
+      ],
+      "correctIndex": 2,
+      "explanation": "「ずれ込む」指延遲、推遲。與「遅くなる」意思相近。"
+    },
+    {
+      "id": "m3-2021jul-q4",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "中止の理由は、__ろくに__説明されなかった。",
+      "targetWord": "ろくに",
+      "choices": [
+        "全く",
+        "大して",
+        "なかなか",
+        "事前に"
+      ],
+      "correctIndex": 1,
+      "explanation": "「ろくに～ない」指不怎麼、不充分地。與「大して～ない」意思相近。"
+    },
+    {
+      "id": "m3-2021jul-q5",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "今回の開発計画は、これまでのものとは__スケール__が違う。",
+      "targetWord": "スケール",
+      "choices": [
+        "方針",
+        "規模",
+        "目的",
+        "意義"
+      ],
+      "correctIndex": 1,
+      "explanation": "「スケール」指規模。與「規模」意思相同。"
+    },
+    {
+      "id": "m3-2021jul-q6",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "この町のりんご産業の発展は、大野氏の__寄与__によるところが大きい。",
+      "targetWord": "寄与",
+      "choices": [
+        "貢献",
+        "援助",
+        "工夫",
+        "活躍"
+      ],
+      "correctIndex": 0,
+      "explanation": "「寄与」指貢獻。與「貢献」意思相近。"
+    },
+    {
+      "id": "m3-2021dec-q1",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "新しい事業を始めるときには、リスクを__伴う__。",
+      "targetWord": "伴う",
+      "choices": [
+        "利益",
+        "変化",
+        "危険",
+        "反論"
+      ],
+      "correctIndex": 2,
+      "explanation": "「リスク」指風險、危險。與「危険」意思相近。"
+    },
+    {
+      "id": "m3-2021dec-q2",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "その教師は生徒が出したアイディアを__絶賛__した。",
+      "targetWord": "絶賛",
+      "choices": [
+        "非常に素晴らしいとほめた",
+        "あまりにおかしいと笑った",
+        "認めるのは難しいと言った",
+        "問題だと厳しくしかった"
+      ],
+      "correctIndex": 0,
+      "explanation": "「絶賛」指極力讚賞。與「非常に素晴らしいとほめた」意思相近。"
+    },
+    {
+      "id": "m3-2021dec-q3",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "彼は今ごろ、__くつろいで__いるだろう。",
+      "targetWord": "くつろいで",
+      "choices": [
+        "すっきりして",
+        "がっかりして",
+        "ゆっくりして",
+        "びっくりして"
+      ],
+      "correctIndex": 2,
+      "explanation": "「くつろぐ」指放鬆休息。與「ゆっくりする」意思相近。"
+    },
+    {
+      "id": "m3-2021dec-q4",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "その件は__うやむや__にされた。",
+      "targetWord": "うやむや",
+      "choices": [
+        "明らか",
+        "あいまい",
+        "秘密",
+        "中止"
+      ],
+      "correctIndex": 1,
+      "explanation": "「うやむや」指含糊不清。與「あいまい」意思相近。"
+    },
+    {
+      "id": "m3-2021dec-q5",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "池田さんが今度、__出馬__するらしい。",
+      "targetWord": "出馬",
+      "choices": [
+        "映画に出る",
+        "番組に出る",
+        "大会に出る",
+        "選挙に出る"
+      ],
+      "correctIndex": 3,
+      "explanation": "「出馬」指參選、出馬競選。與「選挙に出る」意思相同。"
+    },
+    {
+      "id": "m3-2021dec-q6",
+      "type": "mondai3",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "駅前に巨大スーパーができたら__お手上げ__だ。",
+      "targetWord": "お手上げ",
+      "choices": [
+        "大歓迎",
+        "どうしようもない",
+        "ぜひ働きたい",
+        "驚きだ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「お手上げ」指束手無策、無可奈何。與「どうしようもない」意思相近。"
+    },
+    {
+      "id": "m3-2022jul-q1",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "友人に__触発__されて、事業を始めた。",
+      "targetWord": "触発",
+      "choices": [
+        "誘われて",
+        "提案されて",
+        "助けられて",
+        "刺激されて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「触発（しょくはつ）」意為觸發、刺激。被朋友刺激而開始創業。同義詞是「刺激されて」。"
+    },
+    {
+      "id": "m3-2022jul-q2",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "彼の言動にはほとんどの人が__閉口__している。",
+      "targetWord": "閉口",
+      "choices": [
+        "慣れて",
+        "困って",
+        "がっかりして",
+        "ほっとして"
+      ],
+      "correctIndex": 1,
+      "explanation": "「閉口（へいこう）」意為不知所措、感到困擾。同義詞是「困って」。"
+    },
+    {
+      "id": "m3-2022jul-q3",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "彼は仕事を辞めてから、__気まま__な生活をしているようだ。",
+      "targetWord": "気まま",
+      "choices": [
+        "質素な",
+        "退屈な",
+        "ぜいたくな",
+        "自由な"
+      ],
+      "correctIndex": 3,
+      "explanation": "「気まま」意為隨心所欲、自由自在。同義詞是「自由な」。"
+    },
+    {
+      "id": "m3-2022jul-q4",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "6時発の飛行機には、__若干__空席があります。",
+      "targetWord": "若干",
+      "choices": [
+        "まだ",
+        "かなり",
+        "いくつか",
+        "おそらく"
+      ],
+      "correctIndex": 2,
+      "explanation": "「若干（じゃっかん）」意為若干、一些。同義詞是「いくつか」。"
+    },
+    {
+      "id": "m3-2022jul-q5",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "これは__手分け__したほうがいい。",
+      "targetWord": "手分け",
+      "choices": [
+        "分割",
+        "分列",
+        "分担",
+        "分類"
+      ],
+      "correctIndex": 2,
+      "explanation": "「手分け（てわけ）」意為分工合作。同義詞是「分担（ぶんたん）」。"
+    },
+    {
+      "id": "m3-2022jul-q6",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "林さんが、残った仕事を__てきぱき__と処理してくれた。",
+      "targetWord": "てきぱき",
+      "choices": [
+        "早く正確に",
+        "時間をかけて丁寧に",
+        "張り切る",
+        "嫌がる"
+      ],
+      "correctIndex": 0,
+      "explanation": "「てきぱき」意為俐落、乾淨利落。同義詞是「早く正確に」。"
+    },
+    {
+      "id": "m3-2022dec-q1",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "必要な資金を__調達__した。",
+      "targetWord": "調達",
+      "choices": [
+        "払った",
+        "預かった",
+        "返却した",
+        "用意した"
+      ],
+      "correctIndex": 3,
+      "explanation": "「調達（ちょうたつ）」意為籌措、準備。同義詞是「用意した」（準備好了）。"
+    },
+    {
+      "id": "m3-2022dec-q2",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "山田さんは__温和__な性格だ。",
+      "targetWord": "温和",
+      "choices": [
+        "さわやかな",
+        "おだやかな",
+        "こまやかな",
+        "かろやかな"
+      ],
+      "correctIndex": 1,
+      "explanation": "「温和（おんわ）」意為溫和。同義詞是「おだやかな」（溫和的）。"
+    },
+    {
+      "id": "m3-2022dec-q3",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "おすすめの__スポット__を教えてください。",
+      "targetWord": "スポット",
+      "choices": [
+        "場所",
+        "商品",
+        "方法",
+        "時期"
+      ],
+      "correctIndex": 0,
+      "explanation": "「スポット」意為地點、場所。同義詞是「場所」。"
+    },
+    {
+      "id": "m3-2022dec-q4",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "各国のチームの実力は__拮抗__している。",
+      "targetWord": "拮抗",
+      "choices": [
+        "差がある",
+        "差がない",
+        "高くなっている",
+        "低くなっている"
+      ],
+      "correctIndex": 1,
+      "explanation": "「拮抗（きっこう）」意為勢均力敵、不相上下。同義詞是「差がない」（沒有差距）。"
+    },
+    {
+      "id": "m3-2022dec-q5",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "住民からの__風当たり__が相当なものだった。",
+      "targetWord": "風当たり",
+      "choices": [
+        "要求",
+        "信頼",
+        "期待",
+        "批判"
+      ],
+      "correctIndex": 3,
+      "explanation": "「風当たり（かぜあたり）」意為批評、非難。來自居民的批評相當強烈。同義詞是「批判」。"
+    },
+    {
+      "id": "m3-2022dec-q6",
+      "type": "mondai3",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "カメラは子供たちの__あどけない__表情を捉えていた。",
+      "targetWord": "あどけない",
+      "choices": [
+        "不安そうな",
+        "真剣な",
+        "無邪気な",
+        "誇らしそうな"
+      ],
+      "correctIndex": 2,
+      "explanation": "「あどけない」意為天真無邪的。同義詞是「無邪気な」。"
+    },
+    {
+      "id": "m3-2023jul-q1",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "この条約は締結されると、農業に影響が出ることが__懸念__される。",
+      "targetWord": "懸念",
+      "choices": [
+        "期待",
+        "心配",
+        "予想",
+        "重視"
+      ],
+      "correctIndex": 1,
+      "explanation": "「懸念（けねん）」意為擔憂。同義詞是「心配」。"
+    },
+    {
+      "id": "m3-2023jul-q2",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "久しぶりに会った友人は何だか__やつれて__いるようだった。",
+      "targetWord": "やつれて",
+      "choices": [
+        "遠慮して",
+        "張り切って",
+        "やせ衰えて",
+        "感動して"
+      ],
+      "correctIndex": 2,
+      "explanation": "「やつれる」意為消瘦、憔悴。同義詞是「やせ衰えて」。"
+    },
+    {
+      "id": "m3-2023jul-q3",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "彼が__奮闘__している姿を見て、力を貸そうと思った。",
+      "targetWord": "奮闘",
+      "choices": [
+        "じっと我慢して",
+        "必死に頑張って",
+        "激しく怒って",
+        "焦って取り組んで"
+      ],
+      "correctIndex": 1,
+      "explanation": "「奮闘（ふんとう）」意為奮鬥、拼命努力。同義詞是「必死に頑張って」。"
+    },
+    {
+      "id": "m3-2023jul-q4",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "あれは__不慮__の事故だったとしか言いようがない。",
+      "targetWord": "不慮",
+      "choices": [
+        "しかたない",
+        "ありえない",
+        "思いがけない",
+        "情けない"
+      ],
+      "correctIndex": 2,
+      "explanation": "「不慮（ふりょ）」意為意外的、出乎意料的。同義詞是「思いがけない」。"
+    },
+    {
+      "id": "m3-2023jul-q5",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "倉庫の品物を__根こそぎ__持っていかれた。",
+      "targetWord": "根こそぎ",
+      "choices": [
+        "すべて",
+        "だいぶ",
+        "一度に",
+        "次々に"
+      ],
+      "correctIndex": 0,
+      "explanation": "「根こそぎ」意為連根拔起、全部。倉庫的東西被全部拿走了。同義詞是「すべて」。"
+    },
+    {
+      "id": "m3-2023jul-q6",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "若いころ私は、商品開発の仕事に__没頭__していた。",
+      "targetWord": "没頭",
+      "choices": [
+        "飽きて",
+        "憧れて",
+        "不満を持って",
+        "熱中して"
+      ],
+      "correctIndex": 3,
+      "explanation": "「没頭（ぼっとう）」意為埋頭、專注。同義詞是「熱中して」。"
+    },
+    {
+      "id": "m3-202312-q1",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "自分の__尺度__を持ったほうがいい。",
+      "targetWord": "尺度",
+      "choices": [
+        "理想",
+        "意思",
+        "基準",
+        "専門"
+      ],
+      "correctIndex": 2,
+      "explanation": "「尺度」意思是標準、尺度，與「基準」（標準）意思相近。"
+    },
+    {
+      "id": "m3-202312-q2",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "__わずらわしい__仕事をやることになってしまった。",
+      "targetWord": "わずらわしい",
+      "choices": [
+        "退屈な",
+        "面倒な",
+        "危険な",
+        "余計な"
+      ],
+      "correctIndex": 1,
+      "explanation": "「わずらわしい」意思是麻煩的、繁瑣的，與「面倒な」（麻煩的）意思相近。"
+    },
+    {
+      "id": "m3-202312-q3",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "池田さんには会えたが、__肝心__な話はできなかった。",
+      "targetWord": "肝心",
+      "choices": [
+        "個人的な",
+        "具体的な",
+        "詳細な",
+        "重要な"
+      ],
+      "correctIndex": 3,
+      "explanation": "「肝心」意思是最重要的、關鍵的，與「重要な」（重要的）意思相近。"
+    },
+    {
+      "id": "m3-202312-q4",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "今週は仕事が__はかどりました__。",
+      "targetWord": "はかどりました",
+      "choices": [
+        "順調に進みました",
+        "大幅に遅れました",
+        "徐々に減りました",
+        "急激に増えました"
+      ],
+      "correctIndex": 0,
+      "explanation": "「はかどる」意思是進展順利，與「順調に進む」（順利進行）意思相近。"
+    },
+    {
+      "id": "m3-202312-q5",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "新人のときはずっと__辛抱__していた。",
+      "targetWord": "辛抱",
+      "choices": [
+        "苦労",
+        "我慢",
+        "失敗",
+        "心配"
+      ],
+      "correctIndex": 1,
+      "explanation": "「辛抱」意思是忍耐、忍受，與「我慢」（忍耐）意思相近。"
+    },
+    {
+      "id": "m3-202312-q6",
+      "type": "mondai3",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "この地方の__しきたり__について話を聞いた。",
+      "targetWord": "しきたり",
+      "choices": [
+        "名物",
+        "気候",
+        "慣習",
+        "歴史"
+      ],
+      "correctIndex": 2,
+      "explanation": "「しきたり」意思是慣例、傳統習俗，與「慣習」（慣例、習俗）意思相近。"
+    },
+    {
+      "id": "m3-202407-q1",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "これはA社に__委託__することにした。",
+      "targetWord": "委託",
+      "choices": [
+        "戻す",
+        "送る",
+        "任せる",
+        "譲る"
+      ],
+      "correctIndex": 2,
+      "explanation": "「委託」意思是委託、託付，與「任せる」（交給、託付）意思相近。"
+    },
+    {
+      "id": "m3-202407-q2",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "その話を聞いて、__すがすがしい__気分になった。",
+      "targetWord": "すがすがしい",
+      "choices": [
+        "ゆううつな",
+        "爽やかな",
+        "楽しい",
+        "懐かしい"
+      ],
+      "correctIndex": 1,
+      "explanation": "「すがすがしい」意思是清爽的、舒暢的，與「爽やかな」（清爽的）意思相近。"
+    },
+    {
+      "id": "m3-202407-q3",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "リフォームの費用を__工面__する必要がある。",
+      "targetWord": "工面",
+      "choices": [
+        "減らす",
+        "計算する",
+        "用意する",
+        "支払う"
+      ],
+      "correctIndex": 2,
+      "explanation": "「工面」意思是籌措（錢）、想辦法準備，與「用意する」（準備）意思相近。"
+    },
+    {
+      "id": "m3-202407-q4",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "それは仕事の道具なんだから、__そんざいな__扱いをされては困るよ。",
+      "targetWord": "そんざいな",
+      "choices": [
+        "雑な",
+        "変な",
+        "危険な",
+        "強引な"
+      ],
+      "correctIndex": 0,
+      "explanation": "「そんざいな」（粗雜な）意思是粗魯的、馬虎的，與「雑な」（粗糙的、馬虎的）意思相近。"
+    },
+    {
+      "id": "m3-202407-q5",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "男の子は父親の話を__うなだれて__聞いていた。",
+      "targetWord": "うなだれて",
+      "choices": [
+        "ふざけた態度で",
+        "目を閉じて",
+        "まじめな表情で",
+        "下を向いて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「うなだれる」意思是垂頭、低頭（表示沮喪），與「下を向いて」（朝下看）意思相近。"
+    },
+    {
+      "id": "m3-202407-q6",
+      "type": "mondai3",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "悪天候による工事の遅れは、担当者にとって大きな__打撃__だった。",
+      "targetWord": "打撃",
+      "choices": [
+        "アクシデント",
+        "タブー",
+        "プレッシャー",
+        "ダメージ"
+      ],
+      "correctIndex": 3,
+      "explanation": "「打撃」意思是打擊、損害，與「ダメージ」（damage，損害）意思相近。"
     }
   ]
 }

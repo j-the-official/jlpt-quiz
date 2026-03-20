@@ -1,7 +1,7 @@
 {
   "type": "mondai2",
   "version": 1,
-  "lastUpdated": "2026-03-01",
+  "lastUpdated": "2026-03-20",
   "questions": [
     {
       "id": "m2-2025jul-q1",
@@ -226,6 +226,902 @@
       ],
       "correctIndex": 2,
       "explanation": "「とっさに」指瞬間地、反射性地。符合差點跌倒時瞬間抓住手臂的語境。"
+    },
+    {
+      "id": "m2-2020dec-q1",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "商品の値段を間違えて表示していたため、お客さんから（　　）が来た。",
+      "choices": [
+        "エラー",
+        "ノルマ",
+        "ダメージ",
+        "クレーム"
+      ],
+      "correctIndex": 3,
+      "explanation": "「クレーム」指顧客的投訴抱怨。"
+    },
+    {
+      "id": "m2-2020dec-q2",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "御社は新技術を導入することになった（　　）についてお聞かせください。",
+      "choices": [
+        "軌道",
+        "経緯",
+        "経路",
+        "軌跡"
+      ],
+      "correctIndex": 1,
+      "explanation": "「経緯」指事情的來龍去脈、經過。"
+    },
+    {
+      "id": "m2-2020dec-q3",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "この映画のストーリーは、地球の歴史を描いた（　　）ものだ。",
+      "choices": [
+        "絶大な",
+        "壮大な",
+        "盛大な",
+        "甚大な"
+      ],
+      "correctIndex": 1,
+      "explanation": "「壮大」指氣勢宏偉壯麗。"
+    },
+    {
+      "id": "m2-2020dec-q4",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "試験前の一週間は、朝から晩まで（　　）勉強した。",
+      "choices": [
+        "みっちり",
+        "ぐっすり",
+        "べったり",
+        "めっきり"
+      ],
+      "correctIndex": 0,
+      "explanation": "「みっちり」指紮實地、充分地。"
+    },
+    {
+      "id": "m2-2020dec-q5",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "住民からの要望で、空き地に放置されたごみの（　　）が行われた。",
+      "choices": [
+        "消去",
+        "駆除",
+        "削除",
+        "撤去"
+      ],
+      "correctIndex": 3,
+      "explanation": "「撤去」指撤除、清除不需要的東西。"
+    },
+    {
+      "id": "m2-2020dec-q6",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "今年のマラソン大会は、天候不良により数日前から開催が（　　）いたが、当日は無事に行われた。",
+      "choices": [
+        "おそれられて",
+        "あやぶまれて",
+        "にらまれて",
+        "しぶられて"
+      ],
+      "correctIndex": 1,
+      "explanation": "「危ぶまれる」指令人擔心能否順利進行。"
+    },
+    {
+      "id": "m2-2020dec-q7",
+      "type": "mondai2",
+      "year": 2020,
+      "month": 12,
+      "questionNumber": 7,
+      "sentence": "注文していたテレビゲームが明日届くので、早く遊びたくて（　　）している。",
+      "choices": [
+        "びくびく",
+        "おどおど",
+        "うずうず",
+        "はらはら"
+      ],
+      "correctIndex": 2,
+      "explanation": "「うずうず」指迫不及待、按捺不住想做某事。"
+    },
+    {
+      "id": "m2-2021jul-q1",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "上司は私の提案を（　　　）した。",
+      "choices": [
+        "脱却",
+        "駆除",
+        "却下",
+        "除去"
+      ],
+      "correctIndex": 2,
+      "explanation": "「却下」指駁回、否決提案或請求。"
+    },
+    {
+      "id": "m2-2021jul-q2",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "この子は好奇心が（　　　）で、分からないことは何でも知りたがる。",
+      "choices": [
+        "全盛",
+        "旺盛",
+        "盛況",
+        "盛大"
+      ],
+      "correctIndex": 1,
+      "explanation": "「旺盛」指精力或慾望非常旺盛。「好奇心旺盛」為常見搭配。"
+    },
+    {
+      "id": "m2-2021jul-q3",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "このテーブルは、脚の部分に美しい彫刻が（　　　）いる。",
+      "choices": [
+        "設けられて",
+        "装われて",
+        "据えられて",
+        "施されて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「施されている」指被施加了（裝飾等）。「彫刻が施されている」表示刻有美麗的雕刻。"
+    },
+    {
+      "id": "m2-2021jul-q4",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "原油価格が高騰し、その（　　　）が世界中に広がっている。",
+      "choices": [
+        "転移",
+        "投影",
+        "感染",
+        "余波"
+      ],
+      "correctIndex": 3,
+      "explanation": "「余波」指某事件引起的後續影響。原油價格暴漲的餘波擴散到全世界。"
+    },
+    {
+      "id": "m2-2021jul-q5",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "（　　　）の利益ばかり考えないで、もっと長期的に物事を捉えなければならない。",
+      "choices": [
+        "目先",
+        "手中",
+        "足場",
+        "背後"
+      ],
+      "correctIndex": 0,
+      "explanation": "「目先」指眼前的、短期的。「目先の利益」為常見搭配，指眼前的利益。"
+    },
+    {
+      "id": "m2-2021jul-q6",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "小さなけんかがもとで、友達との関係が（　　　）している。",
+      "choices": [
+        "しょんぼり",
+        "ぎくしゃく",
+        "ぼんやり",
+        "うろちょろ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「ぎくしゃく」指關係不順暢、彆扭。因小吵架導致與朋友的關係變得不融洽。"
+    },
+    {
+      "id": "m2-2021jul-q7",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 7,
+      "questionNumber": 7,
+      "sentence": "社長は、会社の将来を（　　　）人材の育成に力を入れている。",
+      "choices": [
+        "になう",
+        "いたわる",
+        "やしなう",
+        "かける"
+      ],
+      "correctIndex": 0,
+      "explanation": "「担う（になう）」指承擔、肩負。培養能肩負公司未來的人才。"
+    },
+    {
+      "id": "m2-2021dec-q1",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "会社を（　　　）させるためには、経営の改善が不可欠である。",
+      "choices": [
+        "存続",
+        "存亡",
+        "依存",
+        "現存"
+      ],
+      "correctIndex": 0,
+      "explanation": "「存続」指使繼續存在。為了讓公司存續下去，經營改善是不可或缺的。"
+    },
+    {
+      "id": "m2-2021dec-q2",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "空港建設に関する調査では、賛成（　　　）が多数を占めた。",
+      "choices": [
+        "系",
+        "帯",
+        "圏",
+        "派"
+      ],
+      "correctIndex": 3,
+      "explanation": "「派」指派別、陣營。「賛成派」即贊成派。"
+    },
+    {
+      "id": "m2-2021dec-q3",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "この地方には、昔からお祝いのとき餅を食べる（　　　）がある。",
+      "choices": [
+        "風土",
+        "風習",
+        "風物",
+        "風情"
+      ],
+      "correctIndex": 1,
+      "explanation": "「風習」指傳統習俗。這個地方有慶祝時吃年糕的風俗習慣。"
+    },
+    {
+      "id": "m2-2021dec-q4",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "友人が困っているのに何もできず、とても（　　　）。",
+      "choices": [
+        "堅苦しかった",
+        "あじけなかった",
+        "厚かましかった",
+        "もどかしかった"
+      ],
+      "correctIndex": 3,
+      "explanation": "「もどかしい」指焦急、心急如焚。朋友遇到困難卻什麼都做不了，感到非常焦急。"
+    },
+    {
+      "id": "m2-2021dec-q5",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "彼はこの機械の開発者なので、仕組みを（　　　）しているはずだ。",
+      "choices": [
+        "熟成",
+        "熟知",
+        "探索",
+        "探知"
+      ],
+      "correctIndex": 1,
+      "explanation": "「熟知」指非常了解。他是這台機器的開發者，應該很了解其構造。"
+    },
+    {
+      "id": "m2-2021dec-q6",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "妹はピアノを習い始めると（　　　）上達して、コンクールで優勝できるまでになった。",
+      "choices": [
+        "ぐずぐず",
+        "だらだら",
+        "めきめき",
+        "うろうろ"
+      ],
+      "correctIndex": 2,
+      "explanation": "「めきめき」指明顯地進步。妹妹學鋼琴後進步神速。"
+    },
+    {
+      "id": "m2-2021dec-q7",
+      "type": "mondai2",
+      "year": 2021,
+      "month": 12,
+      "questionNumber": 7,
+      "sentence": "交渉がまとまりそうだったのに、余計なことを言ったせいで話が（　　　）しまった。",
+      "choices": [
+        "もたれて",
+        "おぼれて",
+        "こじれて",
+        "しびれて"
+      ],
+      "correctIndex": 2,
+      "explanation": "「こじれる」指事情變得複雜化、惡化。因為說了多餘的話導致談判搞砸了。"
+    },
+    {
+      "id": "m2-2022jul-q1",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "子どもたちは（　　　）なリズムに合わせ、手をたたいたり、踊ったりした。",
+      "choices": [
+        "手軽",
+        "軽率",
+        "気軽",
+        "軽快"
+      ],
+      "correctIndex": 3,
+      "explanation": "「軽快（けいかい）」意為輕快。輕快的節奏適合搭配拍手和跳舞。"
+    },
+    {
+      "id": "m2-2022jul-q2",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "予習、授業、復習という（　　　）を繰り返すことで、知識の定着を図る。",
+      "choices": [
+        "ピッチ",
+        "サイクル",
+        "シフト",
+        "ペース"
+      ],
+      "correctIndex": 1,
+      "explanation": "「サイクル」意為循環、周期。預習→上課→復習的循環。"
+    },
+    {
+      "id": "m2-2022jul-q3",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "当事者間では紛争が解決できず、第三者が（　　　）に入った。",
+      "choices": [
+        "代行",
+        "仲裁",
+        "干渉",
+        "媒介"
+      ],
+      "correctIndex": 1,
+      "explanation": "「仲裁（ちゅうさい）」意為調解、仲裁。第三者介入調解紛爭。"
+    },
+    {
+      "id": "m2-2022jul-q4",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "そのいたずらは息子の（　　　）に違いない。",
+      "choices": [
+        "しわざ",
+        "そぶり",
+        "腕前",
+        "扱い"
+      ],
+      "correctIndex": 0,
+      "explanation": "「しわざ（仕業）」意為所為、行為。那個惡作劇一定是兒子的所為。"
+    },
+    {
+      "id": "m2-2022jul-q5",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "完成間際のマンションに欠陥があることが（　　　）して、工事が中止された。",
+      "choices": [
+        "発覚",
+        "派生",
+        "波及",
+        "露出"
+      ],
+      "correctIndex": 0,
+      "explanation": "「発覚（はっかく）」意為被發現、敗露。即將完工的公寓被發現有缺陷。"
+    },
+    {
+      "id": "m2-2022jul-q6",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "この温泉には肌にいい成分が含まれているので、入浴後は肌が（　　　）になります。",
+      "choices": [
+        "さらさら",
+        "ねばねば",
+        "すべすべ",
+        "ごつごつ"
+      ],
+      "correctIndex": 2,
+      "explanation": "「すべすべ」意為光滑。溫泉含有對肌膚有益的成分，泡湯後肌膚變得光滑。"
+    },
+    {
+      "id": "m2-2022jul-q7",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 7,
+      "questionNumber": 7,
+      "sentence": "議論が（　　　）、話し合いは平行線をたどった。",
+      "choices": [
+        "掛け合わなくて",
+        "張り合わなくて",
+        "かみ合わなくて",
+        "釣り合わなくて"
+      ],
+      "correctIndex": 2,
+      "explanation": "「かみ合わない」意為不合拍、無法對接。議論無法對接，討論陷入平行線。"
+    },
+    {
+      "id": "m2-2022dec-q1",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "被害者について報道するときは、仮名を用いてプライバシーを（　　　）している。",
+      "choices": [
+        "保護",
+        "防御",
+        "警備",
+        "支援"
+      ],
+      "correctIndex": 0,
+      "explanation": "「保護（ほご）」意為保護。用假名來保護隱私。"
+    },
+    {
+      "id": "m2-2022dec-q2",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "この模型は、実際にあった建物を20分の1の大きさで（　　　）再現した物だ。",
+      "choices": [
+        "従順に",
+        "厳正に",
+        "忠実に",
+        "均等に"
+      ],
+      "correctIndex": 2,
+      "explanation": "「忠実に（ちゅうじつに）」意為忠實地。忠實地以1/20的比例重現建築物。"
+    },
+    {
+      "id": "m2-2022dec-q3",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "川の水が澄んでいてきれいだったので、両手で（　　　）、顔を洗った。",
+      "choices": [
+        "めくって",
+        "すくって",
+        "はさんで",
+        "つまんで"
+      ],
+      "correctIndex": 1,
+      "explanation": "「すくう」意為舀、撈。用雙手舀水洗臉。"
+    },
+    {
+      "id": "m2-2022dec-q4",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "一生懸命働いて、ついに（　　　）のマイホームを手に入れた。",
+      "choices": [
+        "志望",
+        "本意",
+        "欲求",
+        "念願"
+      ],
+      "correctIndex": 3,
+      "explanation": "「念願（ねんがん）」意為夙願、多年心願。終於得到了夢寐以求的自己的家。"
+    },
+    {
+      "id": "m2-2022dec-q5",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "きれいな写真を撮るためには、まずカメラの（　　　）を合わせることが大切です。",
+      "choices": [
+        "ポーズ",
+        "カーソル",
+        "ピント",
+        "テンポ"
+      ],
+      "correctIndex": 2,
+      "explanation": "「ピント」意為焦點。拍好照片首先要對準焦點。"
+    },
+    {
+      "id": "m2-2022dec-q6",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "全国大会は初出場だったが、厳しい試合を勝ち抜いて何とか上位に（　　　）。",
+      "choices": [
+        "乗り込んだ",
+        "食い込んだ",
+        "駆け込んだ",
+        "追い込んだ"
+      ],
+      "correctIndex": 1,
+      "explanation": "「食い込む（くいこむ）」意為擠入、打入。首次參加全國大會就打入前列。"
+    },
+    {
+      "id": "m2-2022dec-q7",
+      "type": "mondai2",
+      "year": 2022,
+      "month": 12,
+      "questionNumber": 7,
+      "sentence": "道案内をしてくれたので、（　　　）地元の人かと思ったら、実は観光客だった。",
+      "choices": [
+        "てっきり",
+        "きっぱり",
+        "しっかり",
+        "はっきり"
+      ],
+      "correctIndex": 0,
+      "explanation": "「てっきり」意為以為一定是。因為帶路所以以為一定是當地人，結果其實是觀光客。"
+    },
+    {
+      "id": "m2-2023jul-q1",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "今は両親と暮らしているが卒業して就職したら、家を出て（　　　）したいと思っている。",
+      "choices": [
+        "自制",
+        "自立",
+        "自重",
+        "自任"
+      ],
+      "correctIndex": 1,
+      "explanation": "「自立（じりつ）」意為獨立。畢業就職後想搬出家門獨立。"
+    },
+    {
+      "id": "m2-2023jul-q2",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "この企業は、売り上げの一部を町に寄付することで町の人々に利益を（　　　）している。",
+      "choices": [
+        "返上",
+        "還元",
+        "配給",
+        "譲渡"
+      ],
+      "correctIndex": 1,
+      "explanation": "「還元（かんげん）」意為回饋。將營業額的一部分捐贈給城鎮，回饋給居民。"
+    },
+    {
+      "id": "m2-2023jul-q3",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "今日は朝から空が（　　　）と曇っていて、今にも雨が降り出しそうだ。",
+      "choices": [
+        "びっしょり",
+        "どっさり",
+        "どんより",
+        "ぐったり"
+      ],
+      "correctIndex": 2,
+      "explanation": "「どんより」意為陰沉。天空從早上就陰沉沉的。"
+    },
+    {
+      "id": "m2-2023jul-q4",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "この生産管理のシステムは、維持費の高さが（　　　）になってなかなか普及しない。",
+      "choices": [
+        "ノイズ",
+        "ロック",
+        "タブー",
+        "ネック"
+      ],
+      "correctIndex": 3,
+      "explanation": "「ネック」意為瓶頸、障礙。維護費用高昂成為普及的瓶頸。"
+    },
+    {
+      "id": "m2-2023jul-q5",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "大きな声で歌うと、ストレスの（　　　）になって気分がすっきりする。",
+      "choices": [
+        "発散",
+        "発射",
+        "流出",
+        "排出"
+      ],
+      "correctIndex": 0,
+      "explanation": "「発散（はっさん）」意為發散、釋放。大聲唱歌可以釋放壓力。"
+    },
+    {
+      "id": "m2-2023jul-q6",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "この二つの漢字はよく似ていて（　　　）ので、読み間違えることがある。",
+      "choices": [
+        "まぎらわしい",
+        "もっともらしい",
+        "ずうずうしい",
+        "なれなれしい"
+      ],
+      "correctIndex": 0,
+      "explanation": "「まぎらわしい」意為容易混淆的。兩個漢字很像容易混淆。"
+    },
+    {
+      "id": "m2-2023jul-q7",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 7,
+      "questionNumber": 7,
+      "sentence": "この店は細かいところまで掃除が（　　　）いて、清潔だ。",
+      "choices": [
+        "行き詰って",
+        "行き交って",
+        "行き届いて",
+        "行き渡って"
+      ],
+      "correctIndex": 2,
+      "explanation": "「行き届く（いきとどく）」意為周到、細緻入微。打掃得非常周到，很乾淨。"
+    },
+    {
+      "id": "m2-202312-q1",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 1,
+      "sentence": "そのチームは名門チームが多数出場する中で初出場で優勝という（　　　）を成し遂げた。",
+      "choices": [
+        "好況",
+        "喜劇",
+        "快挙",
+        "繁栄"
+      ],
+      "correctIndex": 2,
+      "explanation": "「快挙」意思是了不起的成就、壯舉。在眾多名門球隊中首次出場就奪冠，是一項壯舉。"
+    },
+    {
+      "id": "m2-202312-q2",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 2,
+      "sentence": "リーダーの無責任な発言が、混乱をさらに（　　　）することになった。",
+      "choices": [
+        "助長",
+        "拡充",
+        "主導",
+        "催促"
+      ],
+      "correctIndex": 0,
+      "explanation": "「助長」意思是助長、使惡化。領導者不負責任的發言進一步助長了混亂。"
+    },
+    {
+      "id": "m2-202312-q3",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 3,
+      "sentence": "誰かを助けてあげたからといって、その分の（　　　）を求めてはいけない。",
+      "choices": [
+        "仕返し",
+        "見返り",
+        "返却",
+        "返済"
+      ],
+      "correctIndex": 1,
+      "explanation": "「見返り」意思是回報、報酬。不應該因為幫助了別人就要求回報。"
+    },
+    {
+      "id": "m2-202312-q4",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 4,
+      "sentence": "学内から選ばれた学生たちによって、代表チームが（　　　）された。",
+      "choices": [
+        "集約",
+        "結合",
+        "結成",
+        "採集"
+      ],
+      "correctIndex": 2,
+      "explanation": "「結成」意思是組成、組建。由校內選出的學生組建了代表隊。"
+    },
+    {
+      "id": "m2-202312-q5",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 5,
+      "sentence": "飛行機やホテルの予約、関係者との日程調整など、出張の（　　　）はすべて秘書に任せている。",
+      "choices": [
+        "手配",
+        "始末",
+        "実施",
+        "整備"
+      ],
+      "correctIndex": 0,
+      "explanation": "「手配」意思是安排、籌備。出差的所有安排都交給了秘書。"
+    },
+    {
+      "id": "m2-202312-q6",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 6,
+      "sentence": "入院生活をして、健康の大切さを（　　　）感じた。",
+      "choices": [
+        "めきめき",
+        "せいぜい",
+        "はきはき",
+        "つくづく"
+      ],
+      "correctIndex": 3,
+      "explanation": "「つくづく」意思是深切地、痛切地。住院後深深感受到了健康的重要性。"
+    },
+    {
+      "id": "m2-202312-q7",
+      "type": "mondai2",
+      "year": 2023,
+      "month": 12,
+      "questionNumber": 7,
+      "sentence": "高木さんは入社当初は表情が硬かったが、だんだん緊張が（　　　））きたらしく、笑顔を見せるようになった。",
+      "choices": [
+        "かすれて",
+        "はがれて",
+        "くずれて",
+        "ほぐれて"
+      ],
+      "correctIndex": 3,
+      "explanation": "「ほぐれて」意思是放鬆、解開。高木剛入公司時表情僵硬，但漸漸緊張感消除了，開始展露笑容。"
+    },
+    {
+      "id": "m2-202407-q1",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 1,
+      "sentence": "今回の遺跡の発見はこれまでの説を（　　　）から覆すものになりそうだ。",
+      "choices": [
+        "拠点",
+        "根底",
+        "原本",
+        "元祖"
+      ],
+      "correctIndex": 1,
+      "explanation": "「根底」意思是根本、根底。「根底から覆す」是常用搭配，意思是從根本上推翻。"
+    },
+    {
+      "id": "m2-202407-q2",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 2,
+      "sentence": "1年で一番忙しい時期なので、休日を（　　　）して働いています。",
+      "choices": [
+        "寄付",
+        "還元",
+        "進呈",
+        "返上"
+      ],
+      "correctIndex": 3,
+      "explanation": "「返上」意思是退還、放棄。「休日を返上する」意思是放棄假日（工作）。"
+    },
+    {
+      "id": "m2-202407-q3",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 3,
+      "sentence": "外部からの問い合わせの電話は、用件を確認して担当者に（　　　）ください。",
+      "choices": [
+        "繰り越して",
+        "差し替えて",
+        "引き渡して",
+        "取り次いで"
+      ],
+      "correctIndex": 3,
+      "explanation": "「取り次ぐ」意思是轉接、傳達。將外部來電確認事項後轉接給負責人。"
+    },
+    {
+      "id": "m2-202407-q4",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 4,
+      "sentence": "新しい生活への期待と不安が（　　　）し、気持ちが落ち着かない。",
+      "choices": [
+        "交錯",
+        "混合",
+        "連動",
+        "反発"
+      ],
+      "correctIndex": 0,
+      "explanation": "「交錯」意思是交錯、交織。期待和不安交織在一起，心情無法平靜。"
+    },
+    {
+      "id": "m2-202407-q5",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 5,
+      "sentence": "トンネル工事が始まって1年になるが、地盤の弱い箇所があり、工事は（　　　）している。",
+      "choices": [
+        "難航",
+        "低迷",
+        "衰退",
+        "脱落"
+      ],
+      "correctIndex": 0,
+      "explanation": "「難航」意思是進展困難。因地基薄弱，工程進展困難。"
+    },
+    {
+      "id": "m2-202407-q6",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 6,
+      "sentence": "会場は、人々の話し声で（　　　）と騒がしく、アナウンスがよく聞こえなかった。",
+      "choices": [
+        "じわじわ",
+        "どろどろ",
+        "がやがや",
+        "べたべた"
+      ],
+      "correctIndex": 2,
+      "explanation": "「がやがや」是擬聲詞，形容人群嘈雜的說話聲。會場因人們的說話聲嘈雜不堪。"
+    },
+    {
+      "id": "m2-202407-q7",
+      "type": "mondai2",
+      "year": 2024,
+      "month": 7,
+      "questionNumber": 7,
+      "sentence": "登山に誘われたが、あまり経験がないので、みんなの（　　　）になると思い、断った。",
+      "choices": [
+        "骨折り",
+        "足手まとい",
+        "裏目",
+        "及び腰"
+      ],
+      "correctIndex": 1,
+      "explanation": "「足手まとい」意思是累贅、拖後腿的人。因為沒什麼登山經驗，怕成為大家的累贅所以拒絕了。"
     }
   ]
 }
