@@ -114,7 +114,7 @@
 
   /* CARD */
   .card {
-    @apply bg-surface border border-sep rounded-lg overflow-hidden shadow-sm;
+    @apply bg-surface border border-sep rounded-lg shadow-sm;
   }
   .card-header {
     @apply py-4 px-5 border-b border-sep;
@@ -146,6 +146,11 @@
     @apply text-fg-muted;
     background: #f0f0f1;
     border-color: #d9d9dd;
+  }
+  .badge-skip {
+    color: var(--color-skip);
+    background: var(--color-skip-hover);
+    border-color: var(--color-skip);
   }
 
   /* PROGRESS */
@@ -212,14 +217,18 @@
 
   /* EXPLANATION / FEEDBACK */
   .explanation {
-    @apply bg-surface-hover border border-sep rounded-[var(--radius)] mt-4;
+    @apply rounded-[var(--radius)] mt-4;
+    background: #faf6e6;
+    border: 1px solid #c8b75a;
     padding: 14px 16px;
   }
   .explanation h4 {
-    @apply text-[.8rem] font-semibold text-fg mb-1.5 flex items-center gap-1.5;
+    @apply text-[.8rem] font-semibold mb-1.5 flex items-center gap-1.5;
+    color: #8a7a2a;
   }
   .explanation p {
-    @apply text-[.85rem] text-fg-muted leading-relaxed;
+    @apply text-[.85rem] leading-relaxed;
+    color: #5c5220;
   }
 }
 
@@ -233,6 +242,15 @@
     @apply border-sep-hover bg-surface-hover;
     transform: translateY(-1px);
   }
+
+  /* CHIP / TOGGLE GROUP */
+  .chip-group { @apply flex flex-wrap gap-1.5; }
+  .chip {
+    @apply py-[5px] px-3 text-[.8rem] border border-sep rounded-[var(--radius)] cursor-pointer text-fg-muted bg-transparent;
+    transition: all 150ms cubic-bezier(.4,0,.2,1);
+  }
+  .chip:hover { @apply border-sep-hover text-fg; }
+  .chip.active { @apply bg-primary text-white border-primary; }
 }
 
 /* === Score ring === */
@@ -279,6 +297,11 @@
 @layer components {
   html.dark .badge-danger { border-color: #6b3333; }
   html.dark .badge-success { border-color: #2a5e3f; }
+  html.dark .badge-skip {
+    color: var(--color-skip);
+    background: var(--color-skip-hover);
+    border-color: #b45309;
+  }
   html.dark .badge-muted {
     @apply bg-surface-hover text-fg-muted;
     border-color: var(--color-sep);
@@ -288,12 +311,64 @@
     border-color: var(--color-primary);
   }
 
+  html.dark .explanation {
+    background: #2e2b1a;
+    border-color: #7a6e3a;
+  }
+  html.dark .explanation h4 { color: #c8b75a; }
+  html.dark .explanation p { color: #b0a468; }
+
   html.dark .btn-skip {
     background: transparent;
     border-color: #b45309;
     color: var(--color-skip);
   }
   html.dark .btn-skip:hover { background: var(--color-skip-hover); }
+}
+
+/* === Note tooltips === */
+@layer components {
+  .note-ref {
+    @apply relative cursor-help;
+    color: var(--color-primary);
+  }
+  .note-ref sup {
+    font-size: .7em;
+    font-weight: 600;
+    padding: 0 1px;
+  }
+  .note-tip {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: var(--color-fg);
+    color: var(--color-bg);
+    border-radius: 6px;
+    font-size: .8rem;
+    line-height: 1.5;
+    white-space: normal;
+    width: max-content;
+    max-width: 260px;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+    pointer-events: none;
+  }
+  .note-tip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--color-fg);
+  }
+  @media (hover: hover) {
+    .note-ref:hover .note-tip { display: block; }
+  }
+  .note-ref.active .note-tip { display: block; }
 }
 
 /* === Responsive === */

@@ -1,59 +1,50 @@
-# JlptApp
+# JLPT N1 考古題
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.22.
+JLPT N1 言語知識特訓 — 按題型刷題、解題技巧、進度追蹤。
 
-## Development server
+## 功能
 
-To start a local development server, run:
+- 13 種題型（問題 1〜13）：漢字讀音、文脈語彙、同義詞、用法、文法、排列組合、文章文法、短文/中文/長文讀解、綜合理解、主題探究、情報檢索
+- 分類篩選（文字・語彙 / 文法 / 読解）與題數選擇
+- 作答後即時顯示正解與解析
+- 錯題本：自動收集答錯的題目，可重複練習
+- 學習進度追蹤：各題型正確率與完成度
+- 深色模式
+- 離線可用（純靜態檔案，資料以 JSON 載入）
 
-```bash
-ng serve
-```
+## 技術
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- 純 HTML + Vanilla JS（單一 `app.js`，無框架）
+- Tailwind CSS v4（透過 `@tailwindcss/cli` 編譯）
+- 部署於 Cloudflare Pages（Wrangler）
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 開發
 
 ```bash
-ng generate --help
+npm install
+npm run dev       # 監聽 CSS 變更，即時編譯
 ```
 
-## Building
-
-To build the project run:
+直接開啟 `index.html` 即可使用，或用任意靜態伺服器：
 
 ```bash
-ng build
+npx serve .
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 建置
 
 ```bash
-ng test
+npm run build     # 編譯並壓縮 CSS
 ```
 
-## Running end-to-end tests
+## 專案結構
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+index.html          入口頁面
+app.js              應用程式邏輯（路由、渲染、狀態管理）
+src/input.css       Tailwind CSS 來源
+style.css           編譯後的 CSS
+data/               題庫 JSON（mondai1〜mondai13）
+favicon.ico         網站圖示
+wrangler.json       Cloudflare Pages 設定
+```
