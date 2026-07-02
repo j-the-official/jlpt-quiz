@@ -1,7 +1,7 @@
 {
   "type": "mondai3",
-  "version": 1,
-  "lastUpdated": "2026-03-20",
+  "version": 2,
+  "lastUpdated": "2026-07-02",
   "questions": [
     {
       "id": "m3-2025jul-q1",
@@ -12,10 +12,10 @@
       "sentence": "まだいくつか__着手していない__仕事がある。",
       "targetWord": "着手していない",
       "choices": [
-        "終わらせて",
-        "引き受けて",
-        "始めて",
-        "やり直して"
+        "終わらせていない",
+        "引き受けていない",
+        "始めていない",
+        "やり直していない"
       ],
       "correctIndex": 2,
       "explanation": "「着手する」指開始做某事。「着手していない」＝還沒開始。"
@@ -133,7 +133,7 @@
       "choices": [
         "間違えて",
         "無駄にして",
-        "かいて",
+        "さいて",
         "延長して"
       ],
       "correctIndex": 1,
@@ -145,13 +145,13 @@
       "year": 2024,
       "month": 12,
       "questionNumber": 3,
-      "sentence": "確認が__おろそか__になっていた。",
-      "targetWord": "おろそか",
+      "sentence": "確認が__おろそかに__なっていた。",
+      "targetWord": "おろそかに",
       "choices": [
-        "めんどうくさ",
+        "めんどうくさく",
         "困難に",
         "遅く",
-        "いいかげん"
+        "いいかげんに"
       ],
       "correctIndex": 3,
       "explanation": "「おろそか」指注意力不足、馬虎的樣子。「いいかげん（馬虎）」最接近。"
@@ -165,10 +165,10 @@
       "sentence": "私たちのチームの__目下の__目標は、市の大会で優勝することだ。",
       "targetWord": "目下の",
       "choices": [
-        "最大",
-        "将来",
-        "今",
-        "最低限"
+        "最大の",
+        "将来の",
+        "今の",
+        "最低限の"
       ],
       "correctIndex": 2,
       "explanation": "「目下」指目前、當下。「今（現在）」最接近。"
@@ -196,8 +196,8 @@
       "year": 2024,
       "month": 12,
       "questionNumber": 6,
-      "sentence": "先生に本を__進呈__しました。",
-      "targetWord": "進呈",
+      "sentence": "先生に本を__進呈しました__。",
+      "targetWord": "進呈しました",
       "choices": [
         "差し上げました",
         "いただきました",
@@ -213,7 +213,7 @@
       "year": 2020,
       "month": 12,
       "questionNumber": 1,
-      "sentence": "それについてはエキスパートにも意見を聞いてみよう。",
+      "sentence": "それについては__エキスパート__にも意見を聞いてみよう。",
       "targetWord": "エキスパート",
       "choices": [
         "発明家",
@@ -230,8 +230,8 @@
       "year": 2020,
       "month": 12,
       "questionNumber": 2,
-      "sentence": "兄は手にした新聞の記事を__凝視__した。",
-      "targetWord": "凝視",
+      "sentence": "兄は手にした新聞の記事を__凝視した__。",
+      "targetWord": "凝視した",
       "choices": [
         "ざっと見た",
         "じっと見た",
@@ -247,8 +247,8 @@
       "year": 2020,
       "month": 12,
       "questionNumber": 3,
-      "sentence": "架空の人物を主人公にして物語を作った。",
-      "targetWord": "架空",
+      "sentence": "__架空の__人物を主人公にして物語を作った。",
+      "targetWord": "架空の",
       "choices": [
         "素敵な",
         "思い出の",
@@ -264,7 +264,7 @@
       "year": 2020,
       "month": 12,
       "questionNumber": 4,
-      "sentence": "鈴木さんには、かねがね__お目にかかりたい__と思っておりました。",
+      "sentence": "鈴木さんには、__かねがね__お目にかかりたいと思っておりました。",
       "targetWord": "かねがね",
       "choices": [
         "できれば",
@@ -299,7 +299,7 @@
       "month": 12,
       "questionNumber": 6,
       "sentence": "彼はいつも__ぼやいている__。",
-      "targetWord": "ぼやいて",
+      "targetWord": "ぼやいている",
       "choices": [
         "冗談を言っている",
         "わがままを言っている",
@@ -315,8 +315,8 @@
       "year": 2021,
       "month": 7,
       "questionNumber": 1,
-      "sentence": "祖父は__寡黙__な人だったそうだ。",
-      "targetWord": "寡黙",
+      "sentence": "祖父は__寡黙な__人だったそうだ。",
+      "targetWord": "寡黙な",
       "choices": [
         "口数が少ない",
         "知識に乏しい",
@@ -332,8 +332,8 @@
       "year": 2021,
       "month": 7,
       "questionNumber": 2,
-      "sentence": "異なる意見が次々と出されて、会議は__紛糾__した。",
-      "targetWord": "紛糾",
+      "sentence": "異なる意見が次々と出されて、会議は__紛糾した__。",
+      "targetWord": "紛糾した",
       "choices": [
         "盛り上がった",
         "長引いた",
@@ -349,8 +349,8 @@
       "year": 2021,
       "month": 7,
       "questionNumber": 3,
-      "sentence": "この様子だと、新薬の発売はかなり__ずれ込み__そうだ。",
-      "targetWord": "ずれ込み",
+      "sentence": "この様子だと、新薬の発売はかなり__ずれ込みそうだ__。",
+      "targetWord": "ずれ込みそうだ",
       "choices": [
         "早くなりそうだ",
         "多くなりそうだ",
@@ -417,8 +417,8 @@
       "year": 2021,
       "month": 12,
       "questionNumber": 1,
-      "sentence": "新しい事業を始めるときには、リスクを__伴う__。",
-      "targetWord": "伴う",
+      "sentence": "新しい事業を始めるときには、__リスク__を伴う。",
+      "targetWord": "リスク",
       "choices": [
         "利益",
         "変化",
@@ -434,8 +434,8 @@
       "year": 2021,
       "month": 12,
       "questionNumber": 2,
-      "sentence": "その教師は生徒が出したアイディアを__絶賛__した。",
-      "targetWord": "絶賛",
+      "sentence": "その教師は生徒が出したアイディアを__絶賛した__。",
+      "targetWord": "絶賛した",
       "choices": [
         "非常に素晴らしいとほめた",
         "あまりにおかしいと笑った",
@@ -485,8 +485,8 @@
       "year": 2021,
       "month": 12,
       "questionNumber": 5,
-      "sentence": "池田さんが今度、__出馬__するらしい。",
-      "targetWord": "出馬",
+      "sentence": "池田さんが今度、__出馬する__らしい。",
+      "targetWord": "出馬する",
       "choices": [
         "映画に出る",
         "番組に出る",
@@ -502,10 +502,10 @@
       "year": 2021,
       "month": 12,
       "questionNumber": 6,
-      "sentence": "駅前に巨大スーパーができたら__お手上げ__だ。",
-      "targetWord": "お手上げ",
+      "sentence": "駅前に巨大スーパーができたら__お手上げだ__。",
+      "targetWord": "お手上げだ",
       "choices": [
-        "大歓迎",
+        "大歓迎だ",
         "どうしようもない",
         "ぜひ働きたい",
         "驚きだ"
@@ -519,8 +519,8 @@
       "year": 2022,
       "month": 7,
       "questionNumber": 1,
-      "sentence": "友人に__触発__されて、事業を始めた。",
-      "targetWord": "触発",
+      "sentence": "友人に__触発されて__、事業を始めた。",
+      "targetWord": "触発されて",
       "choices": [
         "誘われて",
         "提案されて",
@@ -536,8 +536,8 @@
       "year": 2022,
       "month": 7,
       "questionNumber": 2,
-      "sentence": "彼の言動にはほとんどの人が__閉口__している。",
-      "targetWord": "閉口",
+      "sentence": "彼の言動にはほとんどの人が__閉口して__いる。",
+      "targetWord": "閉口して",
       "choices": [
         "慣れて",
         "困って",
@@ -553,8 +553,8 @@
       "year": 2022,
       "month": 7,
       "questionNumber": 3,
-      "sentence": "彼は仕事を辞めてから、__気まま__な生活をしているようだ。",
-      "targetWord": "気まま",
+      "sentence": "彼は仕事を辞めてから、__気ままな__生活をしているようだ。",
+      "targetWord": "気ままな",
       "choices": [
         "質素な",
         "退屈な",
@@ -604,13 +604,13 @@
       "year": 2022,
       "month": 7,
       "questionNumber": 6,
-      "sentence": "林さんが、残った仕事を__てきぱき__と処理してくれた。",
-      "targetWord": "てきぱき",
+      "sentence": "林さんが、残った仕事を__てきぱきと__処理してくれた。",
+      "targetWord": "てきぱきと",
       "choices": [
         "早く正確に",
         "時間をかけて丁寧に",
-        "張り切る",
-        "嫌がる"
+        "張り切って",
+        "嫌がって"
       ],
       "correctIndex": 0,
       "explanation": "「てきぱき」意為俐落、乾淨利落。同義詞是「早く正確に」。"
@@ -621,8 +621,8 @@
       "year": 2022,
       "month": 12,
       "questionNumber": 1,
-      "sentence": "必要な資金を__調達__した。",
-      "targetWord": "調達",
+      "sentence": "必要な資金を__調達した__。",
+      "targetWord": "調達した",
       "choices": [
         "払った",
         "預かった",
@@ -638,8 +638,8 @@
       "year": 2022,
       "month": 12,
       "questionNumber": 2,
-      "sentence": "山田さんは__温和__な性格だ。",
-      "targetWord": "温和",
+      "sentence": "山田さんは__温和な__性格だ。",
+      "targetWord": "温和な",
       "choices": [
         "さわやかな",
         "おだやかな",
@@ -672,8 +672,8 @@
       "year": 2022,
       "month": 12,
       "questionNumber": 4,
-      "sentence": "各国のチームの実力は__拮抗__している。",
-      "targetWord": "拮抗",
+      "sentence": "各国のチームの実力は__拮抗している__。",
+      "targetWord": "拮抗している",
       "choices": [
         "差がある",
         "差がない",
@@ -757,8 +757,8 @@
       "year": 2023,
       "month": 7,
       "questionNumber": 3,
-      "sentence": "彼が__奮闘__している姿を見て、力を貸そうと思った。",
-      "targetWord": "奮闘",
+      "sentence": "彼が__奮闘して__いる姿を見て、力を貸そうと思った。",
+      "targetWord": "奮闘して",
       "choices": [
         "じっと我慢して",
         "必死に頑張って",
@@ -774,8 +774,8 @@
       "year": 2023,
       "month": 7,
       "questionNumber": 4,
-      "sentence": "あれは__不慮__の事故だったとしか言いようがない。",
-      "targetWord": "不慮",
+      "sentence": "あれは__不慮の__事故だったとしか言いようがない。",
+      "targetWord": "不慮の",
       "choices": [
         "しかたない",
         "ありえない",
@@ -808,8 +808,8 @@
       "year": 2023,
       "month": 7,
       "questionNumber": 6,
-      "sentence": "若いころ私は、商品開発の仕事に__没頭__していた。",
-      "targetWord": "没頭",
+      "sentence": "若いころ私は、商品開発の仕事に__没頭して__いた。",
+      "targetWord": "没頭して",
       "choices": [
         "飽きて",
         "憧れて",
@@ -859,8 +859,8 @@
       "year": 2023,
       "month": 12,
       "questionNumber": 3,
-      "sentence": "池田さんには会えたが、__肝心__な話はできなかった。",
-      "targetWord": "肝心",
+      "sentence": "池田さんには会えたが、__肝心な__話はできなかった。",
+      "targetWord": "肝心な",
       "choices": [
         "個人的な",
         "具体的な",
@@ -927,8 +927,8 @@
       "year": 2024,
       "month": 7,
       "questionNumber": 1,
-      "sentence": "これはA社に__委託__することにした。",
-      "targetWord": "委託",
+      "sentence": "これはA社に__委託する__ことにした。",
+      "targetWord": "委託する",
       "choices": [
         "戻す",
         "送る",
@@ -961,8 +961,8 @@
       "year": 2024,
       "month": 7,
       "questionNumber": 3,
-      "sentence": "リフォームの費用を__工面__する必要がある。",
-      "targetWord": "工面",
+      "sentence": "リフォームの費用を__工面する__必要がある。",
+      "targetWord": "工面する",
       "choices": [
         "減らす",
         "計算する",
@@ -978,8 +978,8 @@
       "year": 2024,
       "month": 7,
       "questionNumber": 4,
-      "sentence": "それは仕事の道具なんだから、__そんざいな__扱いをされては困るよ。",
-      "targetWord": "そんざいな",
+      "sentence": "それは仕事の道具なんだから、__ぞんざいな__扱いをされては困るよ。",
+      "targetWord": "ぞんざいな",
       "choices": [
         "雑な",
         "変な",
@@ -987,7 +987,7 @@
         "強引な"
       ],
       "correctIndex": 0,
-      "explanation": "「そんざいな」（粗雜な）意思是粗魯的、馬虎的，與「雑な」（粗糙的、馬虎的）意思相近。"
+      "explanation": "「ぞんざいな」意思是粗魯的、馬虎的，與「雑な」（粗糙的、馬虎的）意思相近。"
     },
     {
       "id": "m3-202407-q5",

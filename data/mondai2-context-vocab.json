@@ -1,7 +1,7 @@
 {
   "type": "mondai2",
-  "version": 1,
-  "lastUpdated": "2026-03-20",
+  "version": 2,
+  "lastUpdated": "2026-07-02",
   "questions": [
     {
       "id": "m2-2025jul-q1",
@@ -139,7 +139,7 @@
       "questionNumber": 2,
       "sentence": "店の売り上げを五年で二倍にするという目標を（　　）、みんなで努力している。",
       "choices": [
-        "企て",
+        "企てて",
         "興して",
         "築いて",
         "掲げて"
@@ -891,7 +891,7 @@
       "questionNumber": 7,
       "sentence": "この店は細かいところまで掃除が（　　　）いて、清潔だ。",
       "choices": [
-        "行き詰って",
+        "行き詰まって",
         "行き交って",
         "行き届いて",
         "行き渡って"

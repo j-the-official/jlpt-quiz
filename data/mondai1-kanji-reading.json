@@ -1,7 +1,7 @@
 {
   "type": "mondai1",
-  "version": 1,
-  "lastUpdated": "2026-03-20",
+  "version": 2,
+  "lastUpdated": "2026-07-02",
   "questions": [
     {
       "id": "m1-2025jul-q1",
@@ -101,7 +101,7 @@
       "questionNumber": 6,
       "sentence": "親友に、複雑な__胸中__を打ち明ける。",
       "targetWord": "胸中",
-      "targetReading": "きょうじゅう",
+      "targetReading": "きょうちゅう",
       "choices": [
         "きょうじゅう",
         "きゅうちゅう",
@@ -513,7 +513,7 @@
       "year": 2021,
       "month": 12,
       "questionNumber": 5,
-      "sentence": "この文書には、当時の生活の様子が__克明__に記憶されている。",
+      "sentence": "この文書には、当時の生活の様子が__克明__に記録されている。",
       "targetWord": "克明",
       "targetReading": "こくめい",
       "choices": [
@@ -643,10 +643,10 @@
       "targetWord": "阻まれて",
       "targetReading": "はばまれて",
       "choices": [
-        "かこむ",
-        "からむ",
-        "こばむ",
-        "はばむ"
+        "かこまれて",
+        "からまれて",
+        "こばまれて",
+        "はばまれて"
       ],
       "correctIndex": 3,
       "explanation": "「阻む（はばむ）」意為阻擋、妨礙。「阻まれて」讀作「はばまれて」。"
@@ -747,9 +747,9 @@
       "year": 2022,
       "month": 12,
       "questionNumber": 6,
-      "sentence": "調査データは、地球の温暖化を__如実__に示した。",
-      "targetWord": "如実",
-      "targetReading": "にょじつ",
+      "sentence": "調査データは、地球の温暖化を__如実に__示した。",
+      "targetWord": "如実に",
+      "targetReading": "にょじつに",
       "choices": [
         "じょじつに",
         "じょうじつに",
@@ -981,7 +981,7 @@
       "year": 2024,
       "month": 7,
       "questionNumber": 1,
-      "sentence": "食品の__腐敗__を防止する",
+      "sentence": "食品の__腐敗__を防止する。",
       "targetWord": "腐敗",
       "targetReading": "ふはい",
       "choices": [
