@@ -1,0 +1,12 @@
+node_modules/
+src/
+.vscode/
+.claude/
+.wrangler/
+.git/
+.gitignore
+.assetsignore
+*.md
+package.json
+package-lock.json
+wrangler.json

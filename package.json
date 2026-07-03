@@ -2,7 +2,7 @@
   "name": "jlpt-quiz",
   "private": true,
   "scripts": {
-    "build": "npx @tailwindcss/cli -i src/input.css -o style.css --minify",
+    "build": "npx @tailwindcss/cli -i src/input.css -o style.css",
     "dev": "npx @tailwindcss/cli -i src/input.css -o style.css --watch"
   },
   "devDependencies": {

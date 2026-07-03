@@ -21,6 +21,7 @@ pnpm-debug.log*
 
 # Local tool settings
 /.claude/
+/.wrangler/
 
 # Scratch files for local UI checks
 /test-*.html

@@ -22,7 +22,7 @@ const QUESTION_TYPES=[
   {type:'mondai4',number:4,nameJa:'用法',descriptionZh:'給定一個詞彙，從四個句子中選出正確使用該詞彙的句子',section:'vocabulary',dataFile:'data/mondai4-word-usage.json',examCount:6},
   {type:'mondai5',number:5,nameJa:'文の文法1（文法形式の判断）',descriptionZh:'選出最適合填入句子空格的文法選項',section:'grammar',dataFile:'data/mondai5-grammar.json',examCount:5},
   {type:'mondai6',number:6,nameJa:'文の文法2（文の組み立て）',descriptionZh:'將四個選項排列成正確順序，選出放在★位置的選項',section:'grammar',dataFile:'data/mondai6-arrangement.json',examCount:4},
-  {type:'mondai7',number:7,nameJa:'文章の文法',descriptionZh:'閱讀短文，為每個空格選出最適當的詞語或文法',section:'grammar',dataFile:'data/mondai7-passage-grammar.json',examCount:4},
+  {type:'mondai7',number:7,nameJa:'文章の文法',descriptionZh:'閱讀短文，為每個空格選出最適當的詞語或文法',section:'grammar',dataFile:'data/mondai7-passage-grammar.json',examCount:1},
   {type:'mondai8',number:8,nameJa:'内容理解（短文）',descriptionZh:'閱讀短文後，回答相關問題',section:'reading',dataFile:'data/mondai8-short-reading.json',examCount:4},
   {type:'mondai9',number:9,nameJa:'内容理解（中文）',descriptionZh:'閱讀中等長度的文章後，回答相關問題',section:'reading',dataFile:'data/mondai9-medium-reading.json',examCount:9},
   {type:'mondai10',number:10,nameJa:'内容理解（長文）',descriptionZh:'閱讀長篇文章後，回答相關問題',section:'reading',dataFile:'data/mondai10-long-reading.json',examCount:4},
@@ -75,16 +75,19 @@ const TIPS={
 };
 
 // === DATA LOADING ===
+const DATA_VERSION='4';
 const questionBanks={};
+const loadErrors=[];
 async function loadQuestions(type){
   if(questionBanks[type]) return questionBanks[type];
   const info=getTypeInfo(type);if(!info) return [];
   try{
-    const resp=await fetch(info.dataFile);
+    const resp=await fetch(info.dataFile+'?v='+DATA_VERSION);
+    if(!resp.ok) throw new Error('HTTP '+resp.status);
     const data=await resp.json();
     questionBanks[type]=(data.questions||[]).map(q=>({...q,_type:type}));
     return questionBanks[type];
-  }catch(e){console.error('Failed to load',type,e);return[]}
+  }catch(e){console.error('Failed to load',type,e);if(!loadErrors.includes(type))loadErrors.push(type);return[]}
 }
 async function preloadAll(){
   await Promise.all(QUESTION_TYPES.map(t=>loadQuestions(t.type)));
@@ -97,10 +100,24 @@ function createEmptyProgress(){
   return {version:1,lastActivity:Date.now(),progress};
 }
 function loadProgress(){
-  try{const raw=localStorage.getItem('jlpt-n1-progress');if(raw)return JSON.parse(raw)}catch(e){}
+  try{
+    const raw=localStorage.getItem('jlpt-n1-progress');
+    if(raw){
+      const s=JSON.parse(raw);
+      if(s&&typeof s==='object'&&s.progress&&typeof s.progress==='object'){
+        QUESTION_TYPES.forEach(t=>{
+          const tp=s.progress[t.type];
+          if(!tp||typeof tp.totalAttempted!=='number'||typeof tp.totalCorrect!=='number'||!Array.isArray(tp.attempts)||!Array.isArray(tp.wrongQuestionIds)){
+            s.progress[t.type]={type:t.type,totalAttempted:0,totalCorrect:0,attempts:[],wrongQuestionIds:[]};
+          }
+        });
+        return s;
+      }
+    }
+  }catch(e){}
   return createEmptyProgress();
 }
-function saveProgress(state){localStorage.setItem('jlpt-n1-progress',JSON.stringify(state))}
+function saveProgress(state){try{localStorage.setItem('jlpt-n1-progress',JSON.stringify(state))}catch(e){console.error('saveProgress failed',e)}}
 
 function recordAttempt(questionId,type,selectedIndex,correct){
   const state=loadProgress();
@@ -114,7 +131,7 @@ function recordAttempt(questionId,type,selectedIndex,correct){
     if(!tp.wrongQuestionIds.includes(questionId)) tp.wrongQuestionIds=[...tp.wrongQuestionIds,questionId];
     addWrongAnswer(questionId,type);
   }
-  tp.attempts=[...tp.attempts,{questionId,selectedIndex,correct,timestamp:Date.now()}];
+  tp.attempts=[...tp.attempts,{questionId,selectedIndex,correct,timestamp:Date.now()}].slice(-500);
   state.progress[type]=tp;
   state.lastActivity=Date.now();
   saveProgress(state);
@@ -123,10 +140,10 @@ function recordAttempt(questionId,type,selectedIndex,correct){
 // === REVIEW / SPACED REPETITION (localStorage: 'jlpt-n1-review') ===
 const INTERVALS_MS=[3600000,14400000,86400000,172800000,345600000,604800000];
 function loadReview(){
-  try{const raw=localStorage.getItem('jlpt-n1-review');if(raw)return JSON.parse(raw)}catch(e){}
+  try{const raw=localStorage.getItem('jlpt-n1-review');if(raw){const v=JSON.parse(raw);if(Array.isArray(v))return v}}catch(e){}
   return [];
 }
-function saveReview(entries){localStorage.setItem('jlpt-n1-review',JSON.stringify(entries))}
+function saveReview(entries){try{localStorage.setItem('jlpt-n1-review',JSON.stringify(entries))}catch(e){console.error('saveReview failed',e)}}
 function addWrongAnswer(questionId,questionType){
   const entries=loadReview();
   const now=Date.now();
@@ -161,13 +178,23 @@ function markReviewed(questionId,correct){
 }
 
 // === SEEN QUESTION TRACKING ===
-function loadSeen(){try{return JSON.parse(localStorage.getItem('jlpt-n1-seen'))||[]}catch(e){return[]}}
-function saveSeen(list){localStorage.setItem('jlpt-n1-seen',JSON.stringify(list))}
+function loadSeen(){try{const v=JSON.parse(localStorage.getItem('jlpt-n1-seen'));return Array.isArray(v)?v:[]}catch(e){return[]}}
+function saveSeen(list){try{localStorage.setItem('jlpt-n1-seen',JSON.stringify(list))}catch(e){console.error('saveSeen failed',e)}}
 function addSeen(qId){const list=loadSeen();if(!list.includes(qId)){list.push(qId);saveSeen(list)}}
 
 // === HELPERS ===
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function underlineText(text){return text.replace(/__(.+?)__/g,'<span style="border-bottom:2px solid var(--color-primary);padding-bottom:1px" lang="ja">$1</span>')}
+function highlightTarget(choiceHtml,tw){
+  const wrap=s=>`<span style="border-bottom:2px solid var(--color-danger);padding-bottom:1px">${s}</span>`;
+  if(tw&&choiceHtml.includes(tw)) return choiceHtml.replace(tw,wrap(tw));
+  if(tw&&tw.length>=2){
+    const stem=tw.slice(0,-1).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const m=choiceHtml.match(new RegExp(stem+'[ぁ-ん]*'));
+    if(m) return choiceHtml.replace(m[0],wrap(m[0]));
+  }
+  return choiceHtml;
+}
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
 function extractNoteDefs(text){
   const m=text.match(/\n\n(（注\d*）[\s\S]+)$/);
@@ -189,14 +216,20 @@ function applyNotes(html,defs){
   });
 }
 function processNotes(html){return applyNotes(html,extractNoteDefs(html))}
+let noteCloser=null;
 function toggleNote(el){
   const wasActive=el.classList.contains('active');
   document.querySelectorAll('.note-ref.active').forEach(r=>r.classList.remove('active'));
+  if(noteCloser){document.removeEventListener('click',noteCloser);noteCloser=null}
   if(!wasActive){
     el.classList.add('active');
-    setTimeout(()=>document.addEventListener('click',function h(e){
-      if(!el.contains(e.target)){el.classList.remove('active');document.removeEventListener('click',h)}
-    }),0);
+    noteCloser=e=>{
+      if(!el.contains(e.target)){
+        el.classList.remove('active');
+        document.removeEventListener('click',noteCloser);noteCloser=null;
+      }
+    };
+    setTimeout(()=>{if(noteCloser)document.addEventListener('click',noteCloser)},0);
   }
 }
 
@@ -215,11 +248,6 @@ function hasPassage(q){return !isReadingType(q._type)||q.passageContext&&q.passa
 function getSectionCount(sectionId){
   return getTypesForSection(sectionId).reduce((s,t)=>s+((questionBanks[t.type]||[]).filter(hasPassage)).length,0);
 }
-function getExamCount(typeName){
-  const qt=getTypeInfo(typeName);
-  const bank=(questionBanks[typeName]||[]).filter(hasPassage);
-  return Math.min(qt.examCount||bank.length,bank.length);
-}
 function getWrongQuestions(){
   const state=loadProgress();
   const wrong=[];
@@ -229,7 +257,7 @@ function getWrongQuestions(){
     const bank=questionBanks[qt.type]||[];
     tp.wrongQuestionIds.forEach(id=>{
       const q=bank.find(x=>x.id===id);
-      if(q) wrong.push(q);
+      if(q&&hasPassage(q)) wrong.push(q);
     });
   });
   return wrong;
@@ -248,7 +276,6 @@ function goHome(){S.screen='landing';S.mode='normal';render()}
 function goConfig(){S.screen='start';render()}
 function goStart(section){S.sectionFilter=section;S.typeFilter='全部';S.screen='start';render()}
 function goTips(type){S.mondaiType=type;S.screen='tips';render()}
-function setSectionFilter(section){S.sectionFilter=section;S.typeFilter='全部';render()}
 function setTypeFilter(type){S.typeFilter=S.typeFilter===type?'全部':type;render()}
 
 // === QUIZ START ===
@@ -256,7 +283,7 @@ function isReadingType(type){return ['mondai8','mondai9','mondai10','mondai11','
 function groupByPassage(questions){
   const groups=[];const map=new Map();
   questions.forEach(q=>{
-    const key=q._type+'|'+(q.passageContext||'').substring(0,80);
+    const key=q._type+'|'+(q.passageContext||'');
     if(map.has(key)) map.get(key).push(q);
     else{const g=[q];groups.push(g);map.set(key,g)}
   });
@@ -278,7 +305,8 @@ function startQuiz(){
     if(isReadingType(typeName)){
       const groups=groupByPassage(bank);
       const unseen=groups.filter(g=>g.some(q=>!seen.includes(q.id)));
-      const src=unseen.length>0?shuffle(unseen):shuffle([...groups]);
+      const rest=groups.filter(g=>!unseen.includes(g));
+      const src=shuffle(unseen).concat(shuffle(rest));
       let flat=[];
       for(const g of src){if(flat.length>=count) break;flat=flat.concat(g)}
       reading=reading.concat(flat);
@@ -304,9 +332,20 @@ function startQuiz(){
 function startWrongQuiz(){
   const wl=getWrongQuestions();
   if(!wl.length) return;
-  S.questions=shuffle([...wl]);
+  S.questions=groupByPassage(shuffle([...wl])).flat();
   initDrillState();
   S.mode='wrong';S.screen='drill';render();
+}
+function resetTypeState(q){
+  const type=q?q._type:null;
+  if(type==='mondai6'){
+    S.slots=new Array(q&&Array.isArray(q.fragments)&&q.fragments.length?q.fragments.length:4).fill(null);
+    S.activeSlot=null;
+  }
+  if(type==='mondai7'){
+    S.blankAnswers=q&&q.blanks?new Array(q.blanks.length).fill(undefined):[];
+    S.currentBlankIndex=-1;
+  }
 }
 function initDrillState(){
   S.currentIndex=0;S.selectedIndex=-1;S.submitted=false;
@@ -314,11 +353,7 @@ function initDrillState(){
   S.slots=[null,null,null,null];S.activeSlot=null;
   S.blankAnswers=[];S.currentBlankIndex=-1;
   S.sessionCorrect=0;S.sessionWrong=0;S.skipCount=0;S.answerHistory=[];
-  const q=S.questions[0];
-  if(q){
-    const t=q._type;
-    if(t==='mondai7'&&q.blanks) S.blankAnswers=new Array(q.blanks.length).fill(undefined);
-  }
+  resetTypeState(S.questions[0]);
 }
 
 // === QUIZ LOGIC ===
@@ -349,8 +384,10 @@ function skipQuestion(){
   S.skipCount++;
   recordAttempt(q.id,type,-1,false);
   addSeen(q.id);
-  S.sessionWrong++;
-  S.answerHistory[S.currentIndex]={selected:-1,correct:false,skipped:true};
+  const h={selected:-1,correct:false,skipped:true};
+  if(type==='mondai6') h.slots=[...S.slots];
+  if(type==='mondai7') h.blankAnswers=[...S.blankAnswers];
+  S.answerHistory[S.currentIndex]=h;
   if(q.passageContext) S._noScroll=true;
   render();
 }
@@ -377,6 +414,7 @@ function prevQuestion(){
 function restoreAnswer(){
   const a=S.answerHistory[S.currentIndex];
   S.blankReview=-1;
+  resetTypeState(S.questions[S.currentIndex]);
   if(a){
     S.submitted=true;
     S.selectedIndex=a.selected!==undefined?a.selected:-1;
@@ -385,13 +423,6 @@ function restoreAnswer(){
     if(a.blankAnswers){S.blankAnswers=[...a.blankAnswers];S.currentBlankIndex=-1}
   }else{
     S.submitted=false;S.selectedIndex=-1;S.reviewChoice=-1;
-    const q=S.questions[S.currentIndex];
-    const type=q?q._type:null;
-    if(type==='mondai6'){S.slots=[null,null,null,null];S.activeSlot=null}
-    if(type==='mondai7'){
-      if(q&&q.blanks) S.blankAnswers=new Array(q.blanks.length).fill(undefined);
-      S.currentBlankIndex=-1;
-    }
   }
 }
 
@@ -459,10 +490,12 @@ function submitMondai7(){
   S.submitted=true;
   const q=S.questions[S.currentIndex];
   const type=q._type||S.mondaiType;
-  const allCorrect=q.blanks.every((b,i)=>S.blankAnswers[i]===b.correctIndex);
+  const blanksCorrect=q.blanks.filter((b,i)=>S.blankAnswers[i]===b.correctIndex).length;
+  const allCorrect=blanksCorrect===q.blanks.length;
   recordAttempt(q.id,type,-1,allCorrect);
   addSeen(q.id);
-  if(allCorrect) S.sessionCorrect++; else S.sessionWrong++;
+  S.sessionCorrect+=blanksCorrect;
+  S.sessionWrong+=q.blanks.length-blanksCorrect;
   S.answerHistory[S.currentIndex]={selected:-1,correct:allCorrect,blankAnswers:[...S.blankAnswers]};
   S._noScroll=true;
   render();
@@ -487,8 +520,6 @@ const I={
   info:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>',
   arrowLeft:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7M19 12H5"/></svg>',
   arrowRight:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
-  trophy:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>',
-  flame:'<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
   refresh:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>',
   play:'<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>',
 };
@@ -503,7 +534,7 @@ function renderLanding(app){
   const sectionCards=SECTIONS.filter(s=>s.id!=='全部').map(sec=>{
     const m=SECTION_META[sec.id];
     const count=getSectionCount(sec.id);
-    return `<div class="exam-card" onclick="goStart('${sec.id}')" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+    return `<div class="exam-card" role="button" tabindex="0" onclick="goStart('${sec.id}')" style="display:flex;align-items:center;justify-content:space-between;gap:12px">
       <div style="min-width:0">
         <div class="text-xs font-semibold text-fg-muted" style="letter-spacing:.06em">${m.code}</div>
         <div class="font-medium text-sm mt-1" style="line-height:1.4">${m.name}</div>
@@ -519,6 +550,12 @@ function renderLanding(app){
       <div style="font-size:2rem;margin-bottom:8px;display:flex;justify-content:center;color:var(--color-primary)">${I.languages}</div>
       <h1 style="font-size:1.35rem;font-weight:700;letter-spacing:-.02em">JLPT 考古題</h1>
     </div>
+    ${loadErrors.length?`<div class="card mb-4" style="border-color:var(--color-danger)">
+      <div class="card-body" style="display:flex;align-items:center;gap:12px">
+        <p class="text-sm" style="color:var(--color-danger-fg);flex:1">部分題庫載入失敗（${loadErrors.length} 個檔案），請檢查網路連線。</p>
+        <button class="btn btn-primary btn-sm" onclick="location.reload()">重試</button>
+      </div>
+    </div>`:''}
     <div class="mb-4">
       <div class="flex items-center gap-2 mb-3">
         <span class="badge badge-primary">N1</span>
@@ -546,13 +583,13 @@ function renderStart(app){
   // Type chips for current section
   const types=getTypesForSection(S.sectionFilter);
   const typeChips=types.map(qt=>{
-      return `<div class="chip ${S.typeFilter===qt.type?'active':''}" onclick="setTypeFilter('${qt.type}')">${qt.nameJa}</div>`;
+      return `<div class="chip ${S.typeFilter===qt.type?'active':''}" role="button" tabindex="0" onclick="setTypeFilter('${qt.type}')">${qt.nameJa}</div>`;
     }).join('');
 
   const secLabel=SECTIONS.find(s=>s.id===S.sectionFilter)?.label||'全部';
 
   app.innerHTML=`
-    <div class="breadcrumb"><a onclick="goHome()">首頁</a><span class="bc-sep">›</span><span>${secLabel}</span></div>
+    <div class="breadcrumb"><a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><span>${secLabel}</span></div>
 
     <div class="card mb-4">
       <div class="card-header">
@@ -616,10 +653,11 @@ function renderDrill(app){
 // Shared drill header
 function renderDrillHeader(total){
   const modeLabel=S.mode==='wrong'?'錯題':'測驗';
-  const prog=((S.currentIndex+(S.submitted?1:0))/total*100).toFixed(1);
+  const answered=S.answerHistory.filter(Boolean).length;
+  const prog=total>0?(answered/total*100).toFixed(1):'0';
   const secLabel=SECTIONS.find(s=>s.id===S.sectionFilter)?.label||'全部';
   return `<div class="breadcrumb">
-    <a onclick="goHome()">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()">${secLabel}</a><span class="bc-sep">›</span><span>${modeLabel}</span>
+    <a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()" role="button" tabindex="0">${secLabel}</a><span class="bc-sep">›</span><span>${modeLabel}</span>
   </div>
   <div class="flex items-center gap-2 mb-2">
     <span class="text-xs text-fg-dim">${S.currentIndex+1} / ${total}</span>
@@ -667,19 +705,19 @@ function renderDrillStandard(app){
   const showUnderline=['mondai1','mondai3'].includes(type);
   let sentenceHtml=esc(q.sentence);
   if(showUnderline) sentenceHtml=underlineText(sentenceHtml);
-  if(['mondai2','mondai5'].includes(type)){const ansLen=q.choices[q.correctIndex].length;sentenceHtml=sentenceHtml.replace(/（\s*）/g,`<span style="display:inline-block;width:${Math.max(2,ansLen)}em;border-bottom:2px solid var(--color-danger);margin:0 2px"></span>`);}
+  if(['mondai2','mondai5'].includes(type)){sentenceHtml=sentenceHtml.replace(/（\s*）/g,`<span style="display:inline-block;width:4em;border-bottom:2px solid var(--color-danger);margin:0 2px"></span>`);}
 
   app.innerHTML=`
       ${renderDrillHeader(total)}
       <div class="card mb-3">
         ${renderCardHeader()}
         <div class="card-body">
-          <div class="text-sm mb-4" style="line-height:1.7" lang="ja">
+          <div class="text-sm mb-4" style="line-height:1.7;white-space:pre-line" lang="ja">
             ${sentenceHtml}
           </div>
           <div class="flex-col gap-2" style="display:flex">
             ${q.choices.map((c,i)=>`
-              <div class="${optClass(i,q.correctIndex)}" onclick="selectChoice(${i})">
+              <div class="${optClass(i,q.correctIndex)}" role="button" tabindex="0" onclick="selectChoice(${i})">
                 <div class="opt-indicator">${optIndicator(i,q.correctIndex)}</div>
                 <div class="opt-label"><span class="opt-letter">${i+1}.</span>${esc(c)}</div>
               </div>
@@ -706,9 +744,9 @@ function renderDrillMondai4(app){
           </div>
           <div class="flex-col gap-2" style="display:flex">
             ${q.sentenceChoices.map((c,i)=>`
-              <div class="${optClass(i,q.correctIndex)}" onclick="selectChoice(${i})">
+              <div class="${optClass(i,q.correctIndex)}" role="button" tabindex="0" onclick="selectChoice(${i})">
                 <div class="opt-indicator">${optIndicator(i,q.correctIndex)}</div>
-                <div class="opt-label"><span class="opt-letter">${i+1}.</span><span lang="ja">${esc(c).replace(esc(q.targetWord),`<span style="border-bottom:2px solid var(--color-danger);padding-bottom:1px">${esc(q.targetWord)}</span>`)}</span></div>
+                <div class="opt-label"><span class="opt-letter">${i+1}.</span><span lang="ja">${highlightTarget(esc(c),esc(q.targetWord))}</span></div>
               </div>
             `).join('')}
           </div>
@@ -747,7 +785,7 @@ function renderDrillMondai6(app){
               const filled=S.slots[p.slotIndex]!==null;
               const borderColor=p.isStar?'var(--color-primary)':'var(--color-sep)';
               const bg=p.isStar?'var(--color-primary-subtle)':'';
-              return `<span class="inline-flex min-w-[4rem] items-center justify-center px-2 py-1 text-base" style="border:2px dashed ${borderColor};border-radius:var(--radius);background:${bg};cursor:pointer" onclick="selectSlot(${p.slotIndex})">
+              return `<span class="inline-flex min-w-[4rem] items-center justify-center px-2 py-1 text-base" role="button" tabindex="0" style="border:2px dashed ${borderColor};border-radius:var(--radius);background:${bg};cursor:pointer" onclick="selectSlot(${p.slotIndex})">
                 ${filled?`<span class="font-medium">${esc(q.fragments[S.slots[p.slotIndex]])}</span>`
                   :p.isStar?'<span style="color:var(--color-primary);font-weight:700">★</span>'
                   :'<span class="text-fg-dim text-sm">___</span>'}
@@ -806,12 +844,12 @@ function renderDrillMondai7(app){
       bg='var(--color-primary-subtle)';color='var(--color-primary)';border='var(--color-primary-subtle)';
     }
 
-    let html=`<span id="blank-${num}" style="display:inline-flex;align-items:center;gap:4px;border-radius:4px;padding:1px 8px;font-size:.85rem;font-weight:500;cursor:pointer;transition:all 150ms;background:${bg};color:${color};border:1px solid ${border};box-shadow:${shadow};white-space:nowrap" onclick="setBlankIndex(${i})">${label}</span>`;
+    let html=`<span id="blank-${num}" role="button" tabindex="0" style="display:inline-flex;align-items:center;gap:4px;border-radius:4px;padding:1px 8px;font-size:.85rem;font-weight:500;cursor:pointer;transition:all 150ms;background:${bg};color:${color};border:1px solid ${border};box-shadow:${shadow};white-space:nowrap" onclick="setBlankIndex(${i})">${label}</span>`;
 
     if(isCurrent){
       html+=`<div style="display:flex;flex-direction:column;gap:6px;margin:12px 0 8px;padding:12px 14px;background:var(--color-surface);border:1px solid var(--color-sep);border-radius:var(--radius)">
         ${blank.choices.map((c,ci)=>`
-          <div class="${blankOptClass(ci,blank)}" onclick="selectBlankAnswer(${ci})">
+          <div class="${blankOptClass(ci,blank)}" role="button" tabindex="0" onclick="selectBlankAnswer(${ci})">
             <div class="opt-indicator">${blankOptIndicator(ci,blank)}</div>
             <div class="opt-label"><span class="opt-letter">${ci+1}.</span>${esc(c)}</div>
           </div>`).join('')}
@@ -843,7 +881,7 @@ function renderDrillReading(app){
 
   // Split A/B passages for mondai11 (統合理解)
   const abMatch=hasFullPassage&&q.passageContext.match(/^[AＡ]\n\n([\s\S]+?)\n\n[BＢ]\n\n([\s\S]+)$/);
-  const abDefs=abMatch?extractNoteDefs(q.passageContext):{};
+  const abDefs=abMatch?extractNoteDefs(esc(q.passageContext)):{};
   const passageCard=abMatch
     ?`<div class="card mb-3">
         <div class="card-header" style="padding:10px 20px"><span class="text-sm font-semibold">A</span></div>
@@ -880,7 +918,7 @@ function renderDrillReading(app){
           <div class="text-sm mb-4" style="line-height:1.7" lang="ja">${esc(q.question)}</div>
           <div class="flex-col gap-2" style="display:flex">
             ${q.choices.map((c,i)=>`
-              <div class="${optClass(i,q.correctIndex)}" onclick="selectChoice(${i})">
+              <div class="${optClass(i,q.correctIndex)}" role="button" tabindex="0" onclick="selectChoice(${i})">
                 <div class="opt-indicator">${optIndicator(i,q.correctIndex)}</div>
                 <div class="opt-label"><span class="opt-letter">${i+1}.</span>${esc(c)}</div>
               </div>
@@ -893,8 +931,11 @@ function renderDrillReading(app){
 }
 
 // === RESULT SCREEN ===
+function scoreUnits(){
+  return S.questions.reduce((s,q)=>s+((q._type==='mondai7'&&q.blanks)?q.blanks.length:1),0);
+}
 function renderResult(app){
-  const total=S.questions.length;
+  const total=scoreUnits();
   const pct=total>0?Math.round(S.sessionCorrect/total*100):0;
   const pass=pct>=70;
   const isWrongMode=S.mode==='wrong';
@@ -902,7 +943,7 @@ function renderResult(app){
 
   app.innerHTML=`
       <div class="breadcrumb">
-        <a onclick="goHome()">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()">${SECTIONS.find(s=>s.id===S.sectionFilter)?.label||'全部'}</a><span class="bc-sep">›</span><span>結果</span>
+        <a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()" role="button" tabindex="0">${SECTIONS.find(s=>s.id===S.sectionFilter)?.label||'全部'}</a><span class="bc-sep">›</span><span>結果</span>
       </div>
       <div class="card mb-4">
         <div class="card-body text-center" style="padding:32px 20px">
@@ -952,7 +993,7 @@ function renderResult(app){
             }else if(qType==='mondai7'){
               qText=q.passageTitle||'文章の文法';
               correctAns=q.blanks.map(b=>'【'+b.blankNumber+'】'+b.choices[b.correctIndex]).join(' ');
-              userAns=a.blankAnswers?q.blanks.map((b,bi)=>'【'+b.blankNumber+'】'+(a.blankAnswers[bi]!==undefined?b.choices[a.blankAnswers[bi]]:'?')).join(' '):'';
+              userAns=skipped?'跳過':a.blankAnswers?q.blanks.map((b,bi)=>'【'+b.blankNumber+'】'+(a.blankAnswers[bi]!==undefined?b.choices[a.blankAnswers[bi]]:'?')).join(' '):'';
             }else{
               qText=q.sentence||q.question||'';
               correctAns=q.choices?q.choices[q.correctIndex]:'';
@@ -1044,7 +1085,7 @@ function renderTips(app){
 
   app.innerHTML=`
       <div class="breadcrumb">
-        <a onclick="goHome()">首頁</a><span class="bc-sep">›</span><span>解題技巧</span>
+        <a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><span>解題技巧</span>
       </div>
 
       ${data?`
@@ -1061,5 +1102,10 @@ function renderTips(app){
 }
 
 // === INIT ===
+document.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ')&&e.target instanceof HTMLElement&&e.target.getAttribute('role')==='button'){
+    e.preventDefault();e.target.click();
+  }
+});
 render();
-preloadAll().then(()=>{if(S.screen==='landing')render()});
+preloadAll().then(()=>{if(S.screen==='landing'||S.screen==='start')render()});
