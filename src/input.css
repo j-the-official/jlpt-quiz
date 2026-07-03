@@ -196,6 +196,10 @@
     @apply border-danger bg-danger text-white;
   }
   .opt-disabled { @apply cursor-pointer opacity-85; }
+  .opt-reviewing {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -1px;
+  }
   .opt-label {
     @apply text-sm leading-6 flex-1;
     letter-spacing: -.01em;

@@ -980,6 +980,8 @@ function optClass(index,correctIndex){
     cls+=' opt-disabled';
     if(index===correctIndex) cls+=' opt-correct';
     else if(index===S.selectedIndex) cls+=' opt-wrong';
+    const rIdx=S.reviewChoice>=0?S.reviewChoice:correctIndex;
+    if(index===rIdx) cls+=' opt-reviewing';
   }
   return cls;
 }
@@ -998,6 +1000,8 @@ function blankOptClass(index,blank){
     cls+=' opt-disabled';
     if(index===blank.correctIndex) cls+=' opt-correct';
     else if(index===answer) cls+=' opt-wrong';
+    const rIdx=S.blankReview>=0?S.blankReview:blank.correctIndex;
+    if(index===rIdx) cls+=' opt-reviewing';
   }
   return cls;
 }
@@ -1010,19 +1014,6 @@ function blankOptIndicator(index,blank){
 }
 
 // === FEEDBACK PANEL ===
-function expPills(n,correctIndex,wrongIndex,activeIndex,fn){
-  let out='';
-  for(let i=0;i<n;i++){
-    const isC=i===correctIndex,active=i===activeIndex;
-    const bg=active?(isC?'var(--color-success)':'var(--color-danger)'):'transparent';
-    const border=isC?'var(--color-success)':'var(--color-sep-hover)';
-    const color=active?'var(--color-white)':(isC?'var(--color-success-fg)':'var(--color-fg-muted)');
-    out+=`<button onclick="${fn}(${i})" style="min-width:34px;padding:2px 9px;border-radius:999px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all 120ms;border:1.5px solid ${border};background:${bg};color:${color}">${i+1}${isC?' ✓':(i===wrongIndex?' ✗':'')}</button>`;
-  }
-  return out;
-}
-function setReviewChoice(i){S.reviewChoice=i;S._noScroll=true;render()}
-function setBlankReview(i){S.blankReview=i;S._noScroll=true;render()}
 function renderFeedback(q){
   const ce=q.choiceExplanations;
   const ch=q.choices||q.sentenceChoices;
@@ -1034,16 +1025,15 @@ function renderFeedback(q){
     </div>`;
   const idx=(S.reviewChoice>=0&&S.reviewChoice<ch.length)?S.reviewChoice:q.correctIndex;
   const isC=idx===q.correctIndex;
-  const wrongIdx=S.selectedIndex>=0&&S.selectedIndex!==q.correctIndex?S.selectedIndex:-1;
   return `
     <div class="explanation">
       ${base}
       <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
-        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
           <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
-          ${expPills(ch.length,q.correctIndex,wrongIdx,idx,'setReviewChoice')}
+          <span style="font-size:.72rem;color:var(--color-fg-dim);opacity:.75">點選項可切換</span>
         </div>
-        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}. ${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
+        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}.${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
       </div>
     </div>`;
 }
@@ -1051,18 +1041,16 @@ function renderBlankFeedback(blank){
   const ce=blank.choiceExplanations;
   const base=`<h4>${I.info} 解析</h4><p>${esc(blank.explanation)}</p>`;
   if(!ce) return `<div class="explanation" style="margin-top:4px">${base}</div>`;
-  const answer=S.blankAnswers[S.currentBlankIndex];
   const idx=(S.blankReview>=0&&S.blankReview<blank.choices.length)?S.blankReview:blank.correctIndex;
   const isC=idx===blank.correctIndex;
-  const wrongIdx=answer!==undefined&&answer!==blank.correctIndex?answer:-1;
   return `<div class="explanation" style="margin-top:4px">
       ${base}
       <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
-        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
           <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
-          ${expPills(blank.choices.length,blank.correctIndex,wrongIdx,idx,'setBlankReview')}
+          <span style="font-size:.72rem;color:var(--color-fg-dim);opacity:.75">點選項可切換</span>
         </div>
-        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}. ${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
+        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}.${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
       </div>
     </div>`;
 }
