@@ -1017,42 +1017,25 @@ function blankOptIndicator(index,blank){
 function renderFeedback(q){
   const ce=q.choiceExplanations;
   const ch=q.choices||q.sentenceChoices;
-  const base=`<h4>${I.info} 解析</h4>
-      <p>${q.explanation?esc(q.explanation):''}</p>`;
-  if(!ce||!ch) return `
-    <div class="explanation">
-      ${base}
-    </div>`;
-  const idx=(S.reviewChoice>=0&&S.reviewChoice<ch.length)?S.reviewChoice:q.correctIndex;
-  const isC=idx===q.correctIndex;
+  let text=q.explanation||'';
+  if(ce&&ch){
+    const idx=(S.reviewChoice>=0&&S.reviewChoice<ch.length)?S.reviewChoice:q.correctIndex;
+    text=ce[idx]||text;
+  }
   return `
     <div class="explanation">
-      ${base}
-      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
-        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
-          <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
-          <span style="font-size:.72rem;color:var(--color-fg-dim);opacity:.75">點選項可切換</span>
-        </div>
-        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}.${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
-      </div>
+      <h4>${I.info} 解析</h4>
+      <p>${esc(text)}</p>
     </div>`;
 }
 function renderBlankFeedback(blank){
   const ce=blank.choiceExplanations;
-  const base=`<h4>${I.info} 解析</h4><p>${esc(blank.explanation)}</p>`;
-  if(!ce) return `<div class="explanation" style="margin-top:4px">${base}</div>`;
-  const idx=(S.blankReview>=0&&S.blankReview<blank.choices.length)?S.blankReview:blank.correctIndex;
-  const isC=idx===blank.correctIndex;
-  return `<div class="explanation" style="margin-top:4px">
-      ${base}
-      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
-        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
-          <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
-          <span style="font-size:.72rem;color:var(--color-fg-dim);opacity:.75">點選項可切換</span>
-        </div>
-        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}.${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
-      </div>
-    </div>`;
+  let text=blank.explanation||'';
+  if(ce){
+    const idx=(S.blankReview>=0&&S.blankReview<blank.choices.length)?S.blankReview:blank.correctIndex;
+    text=ce[idx]||text;
+  }
+  return `<div class="explanation" style="margin-top:4px"><h4>${I.info} 解析</h4><p>${esc(text)}</p></div>`;
 }
 
 // === TIPS ===
