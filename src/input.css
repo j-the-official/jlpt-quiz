@@ -327,7 +327,7 @@
 
   html.dark .btn-skip {
     background: transparent;
-    border-color: #b45309;
+    border-color: var(--color-skip);
     color: var(--color-skip);
   }
   html.dark .btn-skip:hover { background: var(--color-skip-hover); }
