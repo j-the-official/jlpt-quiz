@@ -195,7 +195,7 @@
   .opt-wrong .opt-indicator {
     @apply border-danger bg-danger text-white;
   }
-  .opt-disabled { @apply cursor-default opacity-85; }
+  .opt-disabled { @apply cursor-pointer opacity-85; }
   .opt-label {
     @apply text-sm leading-6 flex-1;
     letter-spacing: -.01em;

@@ -310,6 +310,7 @@ function startWrongQuiz(){
 }
 function initDrillState(){
   S.currentIndex=0;S.selectedIndex=-1;S.submitted=false;
+  S.reviewChoice=-1;S.blankReview=-1;
   S.slots=[null,null,null,null];S.activeSlot=null;
   S.blankAnswers=[];S.currentBlankIndex=-1;
   S.sessionCorrect=0;S.sessionWrong=0;S.skipCount=0;S.answerHistory=[];
@@ -322,9 +323,14 @@ function initDrillState(){
 
 // === QUIZ LOGIC ===
 function selectChoice(index){
-  if(S.submitted)return;
+  if(S.submitted){
+    const cq=S.questions[S.currentIndex];
+    if(cq&&cq.choiceExplanations){S.reviewChoice=index;S._noScroll=true;render();}
+    return;
+  }
   S.selectedIndex=index;
   S.submitted=true;
+  S.reviewChoice=index;
   const q=S.questions[S.currentIndex];
   const type=q._type||S.mondaiType;
   const correct=S.selectedIndex===q.correctIndex;
@@ -337,7 +343,7 @@ function selectChoice(index){
 }
 function skipQuestion(){
   if(S.submitted)return;
-  S.submitted=true;S.selectedIndex=-1;
+  S.submitted=true;S.selectedIndex=-1;S.reviewChoice=-1;
   const q=S.questions[S.currentIndex];
   const type=q._type||S.mondaiType;
   S.skipCount++;
@@ -370,13 +376,15 @@ function prevQuestion(){
 }
 function restoreAnswer(){
   const a=S.answerHistory[S.currentIndex];
+  S.blankReview=-1;
   if(a){
     S.submitted=true;
     S.selectedIndex=a.selected!==undefined?a.selected:-1;
+    S.reviewChoice=S.selectedIndex>=0?S.selectedIndex:-1;
     if(a.slots) S.slots=[...a.slots];
     if(a.blankAnswers){S.blankAnswers=[...a.blankAnswers];S.currentBlankIndex=-1}
   }else{
-    S.submitted=false;S.selectedIndex=-1;
+    S.submitted=false;S.selectedIndex=-1;S.reviewChoice=-1;
     const q=S.questions[S.currentIndex];
     const type=q?q._type:null;
     if(type==='mondai6'){S.slots=[null,null,null,null];S.activeSlot=null}
@@ -432,7 +440,12 @@ function submitMondai6(){
 
 // Mondai 7
 function selectBlankAnswer(choiceIndex){
-  if(S.submitted)return;
+  if(S.submitted){
+    const cq=S.questions[S.currentIndex];
+    const cb=cq&&cq.blanks&&cq.blanks[S.currentBlankIndex];
+    if(cb&&cb.choiceExplanations){S.blankReview=choiceIndex;S._noScroll=true;render();}
+    return;
+  }
   S.blankAnswers=[...S.blankAnswers];
   S.blankAnswers[S.currentBlankIndex]=choiceIndex;
   const nextUnanswered=S.blankAnswers.findIndex((a,i)=>i>S.currentBlankIndex&&a===undefined);
@@ -440,7 +453,7 @@ function selectBlankAnswer(choiceIndex){
   S._noScroll=true;
   render();
 }
-function setBlankIndex(idx){S.currentBlankIndex=S.currentBlankIndex===idx?-1:idx;S._noScroll=true;render();if(S.currentBlankIndex===-1)return;const q=S.questions[S.currentIndex];const num=q.blanks[idx]?.blankNumber;const el=num&&document.getElementById('blank-'+num);if(el)el.scrollIntoView({behavior:'smooth',block:'center'})}
+function setBlankIndex(idx){S.currentBlankIndex=S.currentBlankIndex===idx?-1:idx;S.blankReview=-1;S._noScroll=true;render();if(S.currentBlankIndex===-1)return;const q=S.questions[S.currentIndex];const num=q.blanks[idx]?.blankNumber;const el=num&&document.getElementById('blank-'+num);if(el)el.scrollIntoView({behavior:'smooth',block:'center'})}
 function submitMondai7(){
   if(!S.blankAnswers.every(a=>a!==undefined)||S.submitted)return;
   S.submitted=true;
@@ -672,7 +685,7 @@ function renderDrillStandard(app){
               </div>
             `).join('')}
           </div>
-          ${S.submitted?renderFeedback(q.explanation):''}
+          ${S.submitted?renderFeedback(q):''}
           ${renderNavFooter(total)}
         </div>
       </div>`;
@@ -699,7 +712,7 @@ function renderDrillMondai4(app){
               </div>
             `).join('')}
           </div>
-          ${S.submitted?renderFeedback(q.explanation):''}
+          ${S.submitted?renderFeedback(q):''}
           ${renderNavFooter(total)}
         </div>
       </div>`;
@@ -754,7 +767,7 @@ function renderDrillMondai6(app){
             </div>
             <button onclick="submitMondai6()" ${!S.slots.every(s=>s!==null)?'disabled':''} class="btn btn-primary w-full mt-3">確認答案</button>
           `:''}
-          ${S.submitted?renderFeedback(q.explanation):''}
+          ${S.submitted?renderFeedback(q):''}
           ${renderNavFooter(total)}
         </div>
       </div>`;
@@ -802,7 +815,7 @@ function renderDrillMondai7(app){
             <div class="opt-indicator">${blankOptIndicator(ci,blank)}</div>
             <div class="opt-label"><span class="opt-letter">${ci+1}.</span>${esc(c)}</div>
           </div>`).join('')}
-        ${S.submitted?`<div class="explanation" style="margin-top:4px"><h4>${I.info} 解析</h4><p>${esc(blank.explanation)}</p></div>`:''}
+        ${S.submitted?renderBlankFeedback(blank):''}
       </div>`;
     }
     return html;
@@ -873,7 +886,7 @@ function renderDrillReading(app){
               </div>
             `).join('')}
           </div>
-          ${S.submitted?renderFeedback(q.explanation):''}
+          ${S.submitted?renderFeedback(q):''}
           ${renderNavFooter(total)}
         </div>
       </div>`;
@@ -997,11 +1010,60 @@ function blankOptIndicator(index,blank){
 }
 
 // === FEEDBACK PANEL ===
-function renderFeedback(explanation){
+function expPills(n,correctIndex,wrongIndex,activeIndex,fn){
+  let out='';
+  for(let i=0;i<n;i++){
+    const isC=i===correctIndex,active=i===activeIndex;
+    const bg=active?(isC?'var(--color-success)':'var(--color-danger)'):'transparent';
+    const border=isC?'var(--color-success)':'var(--color-sep-hover)';
+    const color=active?'var(--color-white)':(isC?'var(--color-success-fg)':'var(--color-fg-muted)');
+    out+=`<button onclick="${fn}(${i})" style="min-width:34px;padding:2px 9px;border-radius:999px;font-size:.78rem;font-weight:600;cursor:pointer;transition:all 120ms;border:1.5px solid ${border};background:${bg};color:${color}">${i+1}${isC?' ✓':(i===wrongIndex?' ✗':'')}</button>`;
+  }
+  return out;
+}
+function setReviewChoice(i){S.reviewChoice=i;S._noScroll=true;render()}
+function setBlankReview(i){S.blankReview=i;S._noScroll=true;render()}
+function renderFeedback(q){
+  const ce=q.choiceExplanations;
+  const ch=q.choices||q.sentenceChoices;
+  const base=`<h4>${I.info} 解析</h4>
+      <p>${q.explanation?esc(q.explanation):''}</p>`;
+  if(!ce||!ch) return `
+    <div class="explanation">
+      ${base}
+    </div>`;
+  const idx=(S.reviewChoice>=0&&S.reviewChoice<ch.length)?S.reviewChoice:q.correctIndex;
+  const isC=idx===q.correctIndex;
+  const wrongIdx=S.selectedIndex>=0&&S.selectedIndex!==q.correctIndex?S.selectedIndex:-1;
   return `
     <div class="explanation">
-      <h4>${I.info} 解析</h4>
-      <p>${explanation?esc(explanation):''}</p>
+      ${base}
+      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+          <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
+          ${expPills(ch.length,q.correctIndex,wrongIdx,idx,'setReviewChoice')}
+        </div>
+        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}. ${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
+      </div>
+    </div>`;
+}
+function renderBlankFeedback(blank){
+  const ce=blank.choiceExplanations;
+  const base=`<h4>${I.info} 解析</h4><p>${esc(blank.explanation)}</p>`;
+  if(!ce) return `<div class="explanation" style="margin-top:4px">${base}</div>`;
+  const answer=S.blankAnswers[S.currentBlankIndex];
+  const idx=(S.blankReview>=0&&S.blankReview<blank.choices.length)?S.blankReview:blank.correctIndex;
+  const isC=idx===blank.correctIndex;
+  const wrongIdx=answer!==undefined&&answer!==blank.correctIndex?answer:-1;
+  return `<div class="explanation" style="margin-top:4px">
+      ${base}
+      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-sep)">
+        <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:8px">
+          <span style="font-size:.75rem;font-weight:600;color:var(--color-fg-dim)">選項解析</span>
+          ${expPills(blank.choices.length,blank.correctIndex,wrongIdx,idx,'setBlankReview')}
+        </div>
+        <p style="margin:0"><span style="font-weight:700;color:${isC?'var(--color-success-fg)':'var(--color-danger-fg)'}">${idx+1}. ${isC?'（正解）':''}</span> ${esc(ce[idx])}</p>
+      </div>
     </div>`;
 }
 

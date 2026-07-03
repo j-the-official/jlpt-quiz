@@ -619,7 +619,7 @@
     color: var(--color-white);
   }
   .opt-disabled {
-    cursor: default;
+    cursor: pointer;
     opacity: 85%;
   }
   .opt-label {
