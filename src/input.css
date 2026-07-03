@@ -200,6 +200,9 @@
     outline: 2px solid var(--color-primary);
     outline-offset: -1px;
   }
+  .opt-correct.opt-reviewing {
+    outline-color: var(--color-success);
+  }
   .opt-label {
     @apply text-sm leading-6 flex-1;
     letter-spacing: -.01em;
