@@ -250,6 +250,7 @@ function getSectionCount(sectionId){
 }
 function getWrongQuestions(){
   const state=loadProgress();
+  const review=loadReview();
   const wrong=[];
   QUESTION_TYPES.forEach(qt=>{
     const tp=state.progress[qt.type];
@@ -260,7 +261,15 @@ function getWrongQuestions(){
       if(q&&hasPassage(q)) wrong.push(q);
     });
   });
+  // SRS：依下次複習時間排序（到期越久越優先；沒有紀錄的視為立即到期）
+  const nextOf=id=>{const e=review.find(r=>r.questionId===id);return e?e.nextReview:0};
+  wrong.sort((a,b)=>nextOf(a.id)-nextOf(b.id));
   return wrong;
+}
+function getDueCount(wrongList){
+  const review=loadReview();
+  const now=Date.now();
+  return wrongList.filter(q=>{const e=review.find(r=>r.questionId===q.id);return !e||e.nextReview<=now}).length;
 }
 
 // === STATE ===
@@ -332,7 +341,8 @@ function startQuiz(){
 function startWrongQuiz(){
   const wl=getWrongQuestions();
   if(!wl.length) return;
-  S.questions=groupByPassage(shuffle([...wl])).flat();
+  // 保持 SRS 到期順序，僅將同文章題目聚在一起
+  S.questions=groupByPassage(wl).flat();
   initDrillState();
   S.mode='wrong';S.screen='drill';render();
 }
@@ -603,7 +613,8 @@ function renderStart(app){
           <div class="text-xs font-medium text-fg-dim mb-2" style="letter-spacing:.06em;text-transform:uppercase">類別</div>
           <div class="chip-group">${typeChips}</div>
         </div>
-        <div style="display:flex;justify-content:flex-end">
+        <div style="display:flex;justify-content:flex-end;gap:8px">
+          ${S.typeFilter!=='全部'&&TIPS[S.typeFilter]?`<button class="btn btn-ghost btn-sm" onclick="goTips('${S.typeFilter}')">💡 解題技巧</button>`:''}
           <button class="btn btn-primary btn-sm" onclick="startQuiz()">${I.play} 開始測驗</button>
         </div>
       </div>
@@ -613,7 +624,7 @@ function renderStart(app){
       <div class="card-body flex-col gap-3" style="display:flex">
         <div class="flex items-center gap-2">
           <span class="font-medium text-sm">錯題本</span>
-          <span class="text-xs text-fg-dim">${wl.length} 題</span>
+          <span class="text-xs text-fg-dim">${wl.length} 題${(()=>{const d=getDueCount(wl);return d?`・<span style="color:var(--color-skip)">${d} 題到期</span>`:''})()}</span>
           <button class="btn btn-primary btn-sm" style="margin-left:auto" onclick="startWrongQuiz()">${I.play} 練習錯題</button>
         </div>
       </div>
@@ -1082,10 +1093,11 @@ function renderBlankFeedback(blank){
 // === TIPS ===
 function renderTips(app){
   const data=TIPS[S.mondaiType];
+  const secLabel=SECTIONS.find(s=>s.id===S.sectionFilter)?.label||'全部';
 
   app.innerHTML=`
       <div class="breadcrumb">
-        <a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><span>解題技巧</span>
+        <a onclick="goHome()" role="button" tabindex="0">首頁</a><span class="bc-sep">›</span><a onclick="goConfig()" role="button" tabindex="0">${secLabel}</a><span class="bc-sep">›</span><span>解題技巧</span>
       </div>
 
       ${data?`
@@ -1097,6 +1109,10 @@ function renderTips(app){
               <p class="mt-2 text-sm leading-relaxed text-fg-muted">${tip.content}</p>
             </div>
           `).join('')}
+        </div>
+        <div class="flex gap-2 mt-4">
+          <button class="btn btn-ghost btn-sm" onclick="goConfig()">${I.arrowLeft} 返回</button>
+          <button class="btn btn-primary btn-sm" onclick="startQuiz()">${I.play} 開始測驗</button>
         </div>
       `:`<p class="text-fg-muted">找不到此題型的技巧資料。</p>`}`;
 }
