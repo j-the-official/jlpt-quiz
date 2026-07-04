@@ -116,7 +116,7 @@ const TIPS={
 };
 
 // === DATA LOADING ===
-const DATA_VERSION='4';
+const DATA_VERSION='5';
 const questionBanks={};
 const loadErrors=[];
 async function loadQuestions(type){
