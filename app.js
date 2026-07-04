@@ -237,6 +237,7 @@ function highlightTarget(choiceHtml,tw){
   return choiceHtml;
 }
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML}
+function fwDigit(s){return String(s).replace(/[0-9]/g,c=>'０１２３４５６７８９'[+c])}
 function extractNoteDefs(text){
   const m=text.match(/\n\n(（注\d*）[\s\S]+)$/);
   if(!m) return {};
@@ -887,20 +888,21 @@ function renderDrillMondai7(app){
     const selectedText=answered?esc(blank.choices[S.blankAnswers[i]]):'';
 
     // Build marker label
+    const numFw=fwDigit(num);
     let label, bg, color, border, shadow='none';
     if(isCurrent){
-      label=`【${num}】`;
+      label=`【${numFw}】`;
       bg='var(--color-primary)';color='var(--color-primary-fg)';border='var(--color-primary)';shadow='0 1px 3px rgba(0,0,0,.15)';
     }else if(answered&&S.submitted){
       const isCorrect=S.blankAnswers[i]===blank.correctIndex;
-      label=`【${num}】 ${selectedText} ${isCorrect?'✓':'✗'}`;
+      label=`【${numFw}】 ${selectedText} ${isCorrect?'✓':'✗'}`;
       if(isCorrect){bg='var(--color-success-subtle)';color='var(--color-success-fg)';border='var(--color-success)'}
       else{bg='var(--color-danger-subtle)';color='var(--color-danger-fg)';border='var(--color-danger)'}
     }else if(answered){
-      label=`【${num}】 ${selectedText}`;
+      label=`【${numFw}】 ${selectedText}`;
       bg='var(--color-surface-hover)';color='var(--color-fg)';border='var(--color-sep-hover)';
     }else{
-      label=`【${num}】`;
+      label=`【${numFw}】`;
       bg='var(--color-primary-subtle)';color='var(--color-primary)';border='var(--color-primary-subtle)';
     }
 
@@ -1052,8 +1054,8 @@ function renderResult(app){
               userAns=skipped?'跳過':a.selected>=0?q.fragments[a.selected]:'';
             }else if(qType==='mondai7'){
               qText=q.passageTitle||'文章の文法';
-              correctAns=q.blanks.map(b=>'【'+b.blankNumber+'】'+b.choices[b.correctIndex]).join(' ');
-              userAns=skipped?'跳過':a.blankAnswers?q.blanks.map((b,bi)=>'【'+b.blankNumber+'】'+(a.blankAnswers[bi]!==undefined?b.choices[a.blankAnswers[bi]]:'?')).join(' '):'';
+              correctAns=q.blanks.map(b=>'【'+fwDigit(b.blankNumber)+'】'+b.choices[b.correctIndex]).join(' ');
+              userAns=skipped?'跳過':a.blankAnswers?q.blanks.map((b,bi)=>'【'+fwDigit(b.blankNumber)+'】'+(a.blankAnswers[bi]!==undefined?b.choices[a.blankAnswers[bi]]:'?')).join(' '):'';
             }else{
               qText=q.sentence||q.question||'';
               correctAns=q.choices?q.choices[q.correctIndex]:'';
