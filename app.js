@@ -289,11 +289,11 @@ function hasPassage(q){return !isReadingType(q._type)||q.passageContext&&q.passa
 function getSectionCount(sectionId){
   return getTypesForSection(sectionId).reduce((s,t)=>s+((questionBanks[t.type]||[]).filter(hasPassage)).length,0);
 }
-function getWrongQuestions(){
+function getWrongQuestions(sectionId){
   const state=loadProgress();
   const review=loadReview();
   const wrong=[];
-  QUESTION_TYPES.forEach(qt=>{
+  getTypesForSection(sectionId||'全部').forEach(qt=>{
     const tp=state.progress[qt.type];
     if(!tp) return;
     const bank=questionBanks[qt.type]||[];
@@ -380,7 +380,7 @@ function startQuiz(){
   S.mode='normal';S.screen='drill';render();
 }
 function startWrongQuiz(){
-  const wl=getWrongQuestions();
+  const wl=getWrongQuestions(S.sectionFilter);
   if(!wl.length) return;
   // 保持 SRS 到期順序，僅將同文章題目聚在一起
   S.questions=groupByPassage(wl).flat();
@@ -619,7 +619,7 @@ function renderLanding(app){
 
 // === START PAGE (config page) ===
 function renderStart(app){
-  const wl=getWrongQuestions();
+  const wl=getWrongQuestions(S.sectionFilter);
 
   // Per-type weaknesses (filtered to current section)
   const state=loadProgress();
@@ -991,7 +991,7 @@ function renderResult(app){
   const pct=total>0?Math.round(S.sessionCorrect/total*100):0;
   const pass=pct>=70;
   const isWrongMode=S.mode==='wrong';
-  const wrongStillLeft=getWrongQuestions().length;
+  const wrongStillLeft=getWrongQuestions(S.sectionFilter).length;
 
   app.innerHTML=`
       <div class="breadcrumb">
