@@ -835,10 +835,18 @@ function renderDrillMondai6(app){
             ${parts.map(p=>{
               if(p.type==='text') return `<span>${esc(p.value)}</span>`;
               const filled=S.slots[p.slotIndex]!==null;
-              const borderColor=p.isStar?'var(--color-primary)':'var(--color-sep)';
-              const bg=p.isStar?'var(--color-primary-subtle)':'';
-              return `<span class="inline-flex min-w-[4rem] items-center justify-center px-2 py-1 text-base" role="button" tabindex="0" style="border:2px dashed ${borderColor};border-radius:var(--radius);background:${bg};cursor:pointer" onclick="selectSlot(${p.slotIndex})">
-                ${filled?`<span class="font-medium">${esc(q.fragments[S.slots[p.slotIndex]])}</span>`
+              let borderColor=p.isStar?'var(--color-primary)':'var(--color-sep)';
+              let bg=p.isStar?'var(--color-primary-subtle)':'';
+              let borderStyle='dashed',mark='';
+              if(S.submitted&&filled){
+                const ok=S.slots[p.slotIndex]===q.correctOrder[p.slotIndex];
+                borderColor=ok?'var(--color-success)':'var(--color-danger)';
+                bg=ok?'var(--color-success-subtle)':'var(--color-danger-subtle)';
+                borderStyle='solid';
+                if(p.isStar) mark=ok?' <span style="color:var(--color-success-fg);font-weight:700">✓</span>':' <span style="color:var(--color-danger-fg);font-weight:700">✗</span>';
+              }
+              return `<span class="inline-flex min-w-[4rem] items-center justify-center px-2 py-1 text-base" role="button" tabindex="0" style="border:2px ${borderStyle} ${borderColor};border-radius:var(--radius);background:${bg};cursor:${S.submitted?'default':'pointer'}" onclick="selectSlot(${p.slotIndex})">
+                ${filled?`<span class="font-medium">${esc(q.fragments[S.slots[p.slotIndex]])}</span>${mark}`
                   :p.isStar?'<span style="color:var(--color-primary);font-weight:700">★</span>'
                   :'<span class="text-fg-dim text-sm">___</span>'}
               </span>`;
