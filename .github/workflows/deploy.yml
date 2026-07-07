@@ -1,0 +1,58 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Build CSS
+        run: npm run build
+      - name: Validate JS
+        run: node --check app.js
+      - name: Validate question data
+        run: |
+          node -e '
+            const fs=require("fs");
+            const files=fs.readdirSync("data").filter(f=>f.endsWith(".json"));
+            let total=0;
+            for(const f of files){
+              const d=JSON.parse(fs.readFileSync("data/"+f,"utf8"));
+              if(!d.questions) continue;
+              for(const q of d.questions){
+                if(!q.id) throw new Error(f+": question missing id");
+                total++;
+              }
+            }
+            console.log("questions OK:",total);
+          '
+
+  deploy:
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.107.0"

@@ -765,9 +765,7 @@ function renderDrillStandard(app){
       <div class="card mb-3">
         ${renderCardHeader()}
         <div class="card-body">
-          <div class="text-sm mb-4" style="line-height:1.7;white-space:pre-line" lang="ja">
-            ${sentenceHtml}
-          </div>
+          <div class="text-sm mb-4" style="line-height:1.7;white-space:pre-line" lang="ja">${sentenceHtml}</div>
           <div class="flex-col gap-2" style="display:flex">
             ${q.choices.map((c,i)=>`
               <div class="${optClass(i,q.correctIndex)}" role="button" tabindex="0" onclick="selectChoice(${i})">
